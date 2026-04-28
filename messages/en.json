@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "title": "João Mauricio | Sculptor & Visual Artist",
+    "description": "Portfolio of João Mauricio, sculptor and visual artist. Works in bronze, marble and contemporary materials."
+  },
+  "nav": {
+    "hero": "Home",
+    "model": "Featured",
+    "arts": "Works",
+    "timeline": "Journey",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "João Mauricio",
+    "profession": "Sculptor / Visual Artist",
+    "bio": "Exploring form and void through materials that resist time. My works dialogue between the classic and the contemporary, seeking the essence of human expression.",
+    "cta": "See works"
+  },
+  "featured": {
+    "title": "Featured Work",
+    "subtitle": "Interactive 3D Visualization",
+    "description": "Coming soon: explore this work in detail with three-dimensional visualization. Drag, rotate and zoom to see every texture.",
+    "instruction": "Coming soon: interactive 3D visualization"
+  },
+  "works": {
+    "title": "Works",
+    "artworks": [
+      {
+        "title": "Eternal Silence",
+        "technique": "Bronze",
+        "description": "Series on contemplation and absence. Lost wax casting."
+      },
+      {
+        "title": "Fluid Time",
+        "technique": "Marble",
+        "description": "The metamorphosis of stone into movement. Italian Carrara."
+      },
+      {
+        "title": "Invisible Structure",
+        "technique": "Corten Steel",
+        "description": "Dialogue between weight and lightness. Urban installation."
+      },
+      {
+        "title": "Still Gesture",
+        "technique": "Resin",
+        "description": "Capturing the moment before action. Performative series."
+      },
+      {
+        "title": "Veil of Isis",
+        "technique": "Granite",
+        "description": "Textures that reveal and conceal simultaneously."
+      },
+      {
+        "title": "Breath",
+        "technique": "Wood",
+        "description": "Cycle of expansion and contraction. Aged Imbuia."
+      }
+    ]
+  },
+  "journey": {
+    "title": "Journey",
+    "items": [
+      {
+        "title": "Forms of the Invisible",
+        "tag": "Exhibition",
+        "date": "Mar - Jun 2024",
+        "location": "Museum of Modern Art, São Paulo",
+        "description": "Solo exhibition with 12 new works exploring the materiality of absence.",
+        "image": "https://images.unsplash.com/photo-1549887534-1541e9326642?w=600&h=400&fit=crop"
+      },
+      {
+        "title": "Advanced Clay Modeling",
+        "tag": "Class",
+        "date": "2024 - Present",
+        "location": "School of Fine Arts, UFRJ",
+        "description": "Semester workshop on modeling techniques for figurative and abstract sculpture.",
+        "image": "https://images.unsplash.com/photo-1561839561-b13bcfe95249?w=600&h=400&fit=crop"
+      },
+      {
+        "title": "Living Memory",
+        "tag": "Project",
+        "date": "2024 - In progress",
+        "location": "Various neighborhoods, São Paulo",
+        "description": "Community sculpture project co-created with residents from different regions of the city.",
+        "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&h=400&fit=crop"
+      },
+      {
+        "title": "Contemporary Brazilian Sculpture",
+        "tag": "Exhibition",
+        "date": "Nov 2023 - Feb 2024",
+        "location": "Pinacoteca do Estado, São Paulo",
+        "description": "Group show with 15 national artists in dialogue with the architectural space.",
+        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop"
+      },
+      {
+        "title": "Art and Urban Space",
+        "tag": "Class",
+        "date": "2023 - 2024",
+        "location": "Sesc Avenida Paulista",
+        "description": "Free course on sculptural interventions in public spaces.",
+        "image": "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=600&h=400&fit=crop"
+      },
+      {
+        "title": "Public Collection",
+        "tag": "Project",
+        "date": "2023 - Completed",
+        "location": "Municipal parks, Curitiba",
+        "description": "Installation of 8 permanent works in city public parks.",
+        "image": "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=600&h=400&fit=crop"
+      },
+      {
+        "title": "Material Dialogues",
+        "tag": "Exhibition",
+        "date": "Aug - Oct 2023",
+        "location": "Galeria Millan, Rio de Janeiro",
+        "description": "Series of interactive installations inviting the public to touch the works.",
+        "image": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=600&h=400&fit=crop"
+      },
+      {
+        "title": "Casting for Artists",
+        "tag": "Class",
+        "date": "2022 - 2023",
+        "location": "Oswald de Andrade Cultural Workshop",
+        "description": "Practical workshop on bronze and aluminum casting techniques.",
+        "image": "https://images.unsplash.com/photo-1501084817091-a4f3d1d19e07?w=600&h=400&fit=crop"
+      },
+      {
+        "title": "Artist Residency",
+        "tag": "Project",
+        "date": "2022 - Completed",
+        "location": "Carrara Quarry, Italy",
+        "description": "3-month residency in the birthplace of Carrara marble, resulting in 5 works.",
+        "image": "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=600&h=400&fit=crop"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "whatsapp": "+55 (82) 99999-9999",
+    "email": "contato@joaomauricio.art",
+    "instagram": "@joaomauricio.art"
+  },
+  "footer": {
+    "rights": "© 2025 João A. M. Neto. All rights reserved.",
+    "credits": "Developed by João A. M. Neto",
+    "portfolio": "View code"
+  },
+  "lang": {
+    "pt": "PT",
+    "en": "EN"
+  }
+}

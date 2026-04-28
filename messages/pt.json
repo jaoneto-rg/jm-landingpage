@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "title": "João Mauricio | Escultor & Artista Plástico",
+    "description": "Portfólio de João Mauricio, escultor e artista plástico. Obras em bronze, mármore e materiais contemporâneos."
+  },
+  "nav": {
+    "hero": "Início",
+    "model": "Destaque",
+    "arts": "Obras",
+    "timeline": "Trajetória",
+    "contact": "Contato"
+  },
+  "hero": {
+    "name": "João Mauricio",
+    "profession": "Escultor / Artista Plástico",
+    "bio": "Explorando a forma e o vazio através de materiais que resistem ao tempo. Minhas obras dialogam entre o clássico e o contemporâneo, buscando a essência da expressão humana.",
+    "cta": "Ver obras"
+  },
+  "featured": {
+    "title": "Obra em Destaque",
+    "subtitle": "Visualização 3D Interativa",
+    "description": "Em breve, explore esta obra em detalhes com visualização tridimensional. Arraste, gire e aproxime para ver cada textura.",
+    "instruction": "Em breve: visualização 3D interativa"
+  },
+  "works": {
+    "title": "Obras",
+    "artworks": [
+      {
+        "title": "Silêncio Eterno",
+        "technique": "Bronze",
+        "description": "Série sobre contemplação e ausência. Fundição em cera perdida."
+      },
+      {
+        "title": "Fluido Temporal",
+        "technique": "Mármore",
+        "description": "A metamorfose da pedra em movimento. Carrara italiano."
+      },
+      {
+        "title": "Estrutura Invisível",
+        "technique": "Aço Corten",
+        "description": "Diálogo entre o peso e a leveza. Instalação urbana."
+      },
+      {
+        "title": "Gesto Imóvel",
+        "technique": "Resina",
+        "description": "Capturando o instante antes da ação. Série performática."
+      },
+      {
+        "title": "Véu de Isis",
+        "technique": "Granito",
+        "description": "Texturas que revelam e ocultam simultaneamente."
+      },
+      {
+        "title": "Respiração",
+        "technique": "Madeira",
+        "description": "Ciclo de expansão e contração. Imbuia envelhecida."
+      }
+    ]
+  },
+  "journey": {
+    "title": "Trajetória",
+    "items": [
+      {
+        "title": "Formas do Invisível",
+        "tag": "Exposição",
+        "date": "Mar - Jun 2024",
+        "location": "Museu de Arte Moderna, São Paulo",
+        "description": "Exposição individual com 12 obras inéditas explorando a materialidade da ausência.",
+        "image": "https://images.unsplash.com/photo-1549887534-1541e9326642?w=600&h=400&fit=crop"
+      },
+      {
+        "title": "Modelagem em Argila Avançada",
+        "tag": "Aula",
+        "date": "2024 - Atual",
+        "location": "Escola de Belas Artes, UFRJ",
+        "description": "Oficina semestral sobre técnicas de modelagem para escultura figurativa e abstrata.",
+        "image": "https://images.unsplash.com/photo-1561839561-b13bcfe95249?w=600&h=400&fit=crop"
+      },
+      {
+        "title": "Memória Viva",
+        "tag": "Projeto",
+        "date": "2024 - Em andamento",
+        "location": "Vários bairros, São Paulo",
+        "description": "Projeto de esculturas comunitárias co-criadas com moradores de diferentes regiões da cidade.",
+        "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&h=400&fit=crop"
+      },
+      {
+        "title": "Escultura Brasileira Contemporânea",
+        "tag": "Exposição",
+        "date": "Nov 2023 - Fev 2024",
+        "location": "Pinacoteca do Estado, São Paulo",
+        "description": "Coletiva com 15 artistas nacionais em diálogo com o espaço arquitetônico.",
+        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop"
+      },
+      {
+        "title": "Arte e Espaço Urbano",
+        "tag": "Aula",
+        "date": "2023 - 2024",
+        "location": "Sesc Avenida Paulista",
+        "description": "Curso livre sobre intervenções escultóricas em espaços públicos.",
+        "image": "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=600&h=400&fit=crop"
+      },
+      {
+        "title": "Coleção Pública",
+        "tag": "Projeto",
+        "date": "2023 - Concluído",
+        "location": "Parques municipais, Curitiba",
+        "description": "Instalação de 8 obras permanentes em parques públicos da cidade.",
+        "image": "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=600&h=400&fit=crop"
+      },
+      {
+        "title": "Diálogos Materiais",
+        "tag": "Exposição",
+        "date": "Ago - Out 2023",
+        "location": "Galeria Millan, Rio de Janeiro",
+        "description": "Série de instalações interativas convidando o público a tocar as obras.",
+        "image": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=600&h=400&fit=crop"
+      },
+      {
+        "title": "Fundição para Artistas",
+        "tag": "Aula",
+        "date": "2022 - 2023",
+        "location": "Oficina Cultural Oswald de Andrade",
+        "description": "Workshop prático de técnicas de fundição em bronze e alumínio.",
+        "image": "https://images.unsplash.com/photo-1501084817091-a4f3d1d19e07?w=600&h=400&fit=crop"
+      },
+      {
+        "title": "Residência Artística",
+        "tag": "Projeto",
+        "date": "2022 - Concluído",
+        "location": "Pedreira de Carrara, Itália",
+        "description": "Residência de 3 meses no berço do mármore de Carrara, resultando em 5 obras.",
+        "image": "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=600&h=400&fit=crop"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contato",
+    "whatsapp": "+55 (82) 99999-9999",
+    "email": "contato@joaomauricio.art",
+    "instagram": "@joaomauricio.art"
+  },
+  "footer": {
+    "rights": "© 2025 João A. M. Neto. Todos os direitos reservados.",
+    "credits": "Desenvolvido por João A. M. Neto",
+    "portfolio": "Ver código"
+  },
+  "lang": {
+    "pt": "PT",
+    "en": "EN"
+  }
+}

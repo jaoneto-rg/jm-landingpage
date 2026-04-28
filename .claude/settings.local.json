@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm -rf /c/Users/Joao/jm-landingpage/node_modules /c/Users/Joao/jm-landingpage/package-lock.json)",
+      "Bash(npm install *)"
+    ]
+  }
+}

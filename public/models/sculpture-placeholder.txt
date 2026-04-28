@@ -1,0 +1,2 @@
+This is a placeholder file. Replace with actual sculpture.glb 3D model file.
+The model should be placed at: /public/models/sculpture.glb
