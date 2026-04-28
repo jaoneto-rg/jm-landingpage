@@ -1,4 +1,4 @@
-# Paulo Menezes - Portfolio de Artista
+# João Mauricio - Portfolio de Artista
 
 Landing page minimalista e sofisticada para escultor/artista plástico, desenvolvida com Next.js 14+, TypeScript, Tailwind CSS, Framer Motion e Three.js.
 
@@ -71,40 +71,6 @@ Anteriormente focada em um canvas interativo com Three.js, esta seção evoluiu 
 - Ícones SVG puros (sem bibliotecas externas)
 - Links funcionais para WhatsApp, Email e Instagram
 - Hover effects com linha animada
-
-## Instalação
-
-```bash
-# 1. Instalar dependências
-npm install
-
-# 2. Rodar em desenvolvimento
-npm run dev
-
-# 3. Abrir no navegador
-http://localhost:3000
-```
-
-## Build para Produção
-
-```bash
-# Gerar build otimizado
-npm run build
-
-# Iniciar servidor de produção
-npm start
-```
-
-## Personalização
-
-### Dados do Artista
-Edite os arquivos `/messages/pt.json` e `/messages/en.json` com as informações reais.
-
-### Modelo 3D
-Substitua `/public/models/sculpture.glb` pelo modelo real. Se não houver arquivo, uma esfera placeholder será exibida automaticamente.
-
-### Imagens
-As imagens usam Unsplash como placeholder. Substitua pelas imagens reais do artista.
 
 ### Cores
 O tema usa apenas preto e tons de cinza via Tailwind:
