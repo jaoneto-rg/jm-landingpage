@@ -215,32 +215,7 @@ export default function Section3Arts({ messages }: Section3ArtsProps) {
         </motion.div>
       </div>
 
-      {/* Navegação Minimalista */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isVisible ? 1 : 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-        className={section3Styles.navContainer}
-      >
-        <button
-          onClick={() => emblaApi?.scrollPrev()}
-          className={section3Styles.navButton}
-          aria-label="Anterior"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-            <path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </button>
-        <button
-          onClick={() => emblaApi?.scrollNext()}
-          className={section3Styles.navButton}
-          aria-label="Próximo"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-            <path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </button>
-      </motion.div>
+
     </div>
   )
 }

@@ -42,8 +42,4 @@ export const section3Styles = {
     "inline-block self-start px-3 py-1 bg-zinc-700 text-zinc-300 text-xs rounded-full mb-3",
   artworkDescription: "text-zinc-400 text-sm line-clamp-2",
 
-  // Navigation
-  navContainer: "flex justify-center gap-8 mt-12",
-  navButton:
-    "p-2 text-zinc-500 hover:text-white transition-colors duration-300 focus:outline-none",
 };
