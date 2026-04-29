@@ -126,14 +126,19 @@ export default function Section3Arts({ messages }: Section3ArtsProps) {
 
   const { title, artworks } = messages.works
 
+  // Triplica os arrays para garantir faixa infinita sem saltos visíveis
+  const REPEAT = 3
+  const repeatedArtworks = Array.from({ length: REPEAT }, () => artworks).flat()
+  const repeatedImages = Array.from({ length: REPEAT }, () => artworkImages).flat()
+  const total = artworks.length
+
   // Calcula scale, opacity e zIndex para cada card de forma independente
-  const getCardMotion = (index: number) => {
-    const isCenter = selectedIndex === index
-    const isHovered = hoveredIndex === index
+  const getCardMotion = (flatIndex: number) => {
+    const isCenter = selectedIndex === flatIndex
+    const isHovered = hoveredIndex === flatIndex
     const someoneHovered = hoveredIndex !== null
 
     if (!isMobile) {
-      // Desktop: hover é o foco
       if (isHovered) return { scale: 1.08, opacity: 1, zIndex: 30 }
       if (someoneHovered) return { scale: 0.97, opacity: 0.6, zIndex: 1 }
       return { scale: 1.0, opacity: 1, zIndex: 1 }
@@ -169,14 +174,15 @@ export default function Section3Arts({ messages }: Section3ArtsProps) {
           ref={emblaRef}
         >
           <div className={section3Styles.emblaFlex}>
-            {artworks.map((artwork, index) => {
-              const { scale, opacity, zIndex } = getCardMotion(index)
+            {repeatedArtworks.map((artwork, flatIndex) => {
+              const artIdx = flatIndex % total
+              const { scale, opacity, zIndex } = getCardMotion(flatIndex)
               return (
                 <div
-                  key={index}
+                  key={flatIndex}
                   className={section3Styles.itemWrapper}
                   style={{ perspective: '1000px', position: 'relative', zIndex }}
-                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseEnter={() => setHoveredIndex(flatIndex)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
                   <motion.div
@@ -193,11 +199,11 @@ export default function Section3Arts({ messages }: Section3ArtsProps) {
                     {/* Imagem da obra */}
                     <div className={section3Styles.imageContainer}>
                       <Image
-                        src={artworkImages[index]}
+                        src={repeatedImages[flatIndex]}
                         alt={artwork.title}
                         fill
                         className={section3Styles.image}
-                        loading={index < 2 ? 'eager' : 'lazy'}
+                        loading={artIdx < 2 ? 'eager' : 'lazy'}
                       />
                     </div>
 
