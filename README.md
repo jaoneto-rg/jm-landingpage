@@ -1,4 +1,4 @@
-# João Mauricio - Portfolio de Artista
+# João Maurício - Portfolio de Artista
 
 Landing page minimalista e sofisticada para escultor/artista plástico, desenvolvida com Next.js 14+, TypeScript, Tailwind CSS, Framer Motion e Three.js.
 

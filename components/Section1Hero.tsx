@@ -44,8 +44,36 @@ export default function Section1Hero({ messages }: Section1HeroProps) {
   // Scroll para a seção de obras
   const scrollToWorks = () => {
     const element = document.getElementById('arts')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+    const container = document.getElementById('main-container')
+
+    if (element && container) {
+      const containerRect = container.getBoundingClientRect()
+      const elementRect = element.getBoundingClientRect()
+      const targetScrollTop = container.scrollTop + (elementRect.top - containerRect.top)
+      const startScrollTop = container.scrollTop
+      const distance = targetScrollTop - startScrollTop
+      const duration = 1200
+      let startTime: number | null = null
+
+      // Easing function easeInOutCubic (suave no início e no fim)
+      const easeInOutCubic = (t: number): number => {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
+      }
+
+      const animateScroll = (currentTime: number) => {
+        if (!startTime) startTime = currentTime
+        const elapsed = currentTime - startTime
+        const progress = Math.min(elapsed / duration, 1)
+        const ease = easeInOutCubic(progress)
+
+        container.scrollTop = startScrollTop + distance * ease
+
+        if (progress < 1) {
+          requestAnimationFrame(animateScroll)
+        }
+      }
+
+      requestAnimationFrame(animateScroll)
     }
   }
 

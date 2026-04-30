@@ -20,26 +20,27 @@ export const section3Styles = {
     maskImage: 'linear-gradient(to left, black 60%, transparent 100%)',
   } as React.CSSProperties,
 
-  // Embla
-  emblaContainer: "overflow-hidden px-6 sm:px-12 lg:px-20",
-  emblaFlex: "flex gap-5",
+  // Embla — sem gap no flex, espaçamento via margin em cada slide
+  emblaContainer: "overflow-hidden px-6 sm:px-12 lg:px-20 py-10",
+  emblaFlex: "flex",
 
-  // Artwork Item — position relative necessário para z-index funcionar em flex
-  itemWrapper: "flex-shrink-0 w-[260px] sm:w-[300px]",
+  // Artwork Item — marginLeft garante espaço igual inclusive nos clones do loop
+  itemWrapper: "flex-shrink-0 w-[280px] sm:w-[320px] lg:w-[360px] ml-5",
   itemMotionBase:
     "bg-zinc-900 border border-zinc-800 overflow-hidden cursor-pointer " +
-    "hover:border-zinc-600 transition-colors duration-300 origin-center",
-  itemInlineHeight: { height: '380px' } as React.CSSProperties,
+    "hover:border-zinc-600 transition-colors duration-300 origin-center h-[560px] sm:h-[520px]",
 
   // Artwork Image
-  imageContainer: "relative h-[60%] overflow-hidden",
+  imageContainer: "relative h-[55%] overflow-hidden",
   image: "object-cover transition-transform duration-500",
 
   // Artwork Info
-  infoContainer: "p-5 h-[40%] flex flex-col",
-  artworkTitle: "text-white font-medium text-lg mb-2",
+  infoContainer: "p-5 h-[45%] flex flex-col",
+  artworkTitle: "text-white font-medium text-xl mb-3",
+  tagsContainer: "flex flex-wrap gap-2 mb-4",
   techniqueBadge:
-    "inline-block self-start px-3 py-1 bg-zinc-700 text-zinc-300 text-xs rounded-full mb-3",
-  artworkDescription: "text-zinc-400 text-sm line-clamp-2",
+    "inline-block px-3 py-1 bg-zinc-700 text-zinc-300 text-xs rounded-full",
+  artworkDescription: "text-zinc-400 text-sm leading-relaxed line-clamp-6",
+  artworkDimensions: "text-zinc-500 text-xs font-mono mt-auto pt-1 border-t border-zinc-800",
 
 };

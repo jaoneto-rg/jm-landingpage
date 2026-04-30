@@ -3,14 +3,15 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import useEmblaCarousel from 'embla-carousel-react'
-import AutoScroll from 'embla-carousel-auto-scroll'
 import Image from 'next/image'
 import { section3Styles } from '../styles/Section3ArtsStyles'
 
 interface Artwork {
   title: string
-  technique: string
+  tags: string[]
   description: string
+  image: string
+  dimensions?: string
 }
 
 interface Section3ArtsProps {
@@ -22,15 +23,7 @@ interface Section3ArtsProps {
   }
 }
 
-// Imagens placeholder do Unsplash para as obras
-const artworkImages = [
-  'https://images.unsplash.com/photo-1549887534-1541e9326642?w=400&h=500&fit=crop',
-  'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=500&fit=crop',
-  'https://images.unsplash.com/photo-1561839561-b13bcfe95249?w=400&h=500&fit=crop',
-  'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400&h=500&fit=crop',
-  'https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=400&h=500&fit=crop',
-  'https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=400&h=500&fit=crop',
-]
+// Imagens vêm agora diretamente de cada Artwork no JSON
 
 export default function Section3Arts({ messages }: Section3ArtsProps) {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -39,20 +32,13 @@ export default function Section3Arts({ messages }: Section3ArtsProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const [isMobile, setIsMobile] = useState(false)
 
-  const autoScrollPlugin = useRef(
-    AutoScroll({
-      playOnInit: true,
-      stopOnInteraction: false,
-      stopOnMouseEnter: true,
-      speed: 1.0,
-      direction: 'backward',
-    })
-  ).current
-
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true, align: 'center', skipSnaps: false, dragFree: true },
-    [autoScrollPlugin]
-  )
+  // Sem auto-scroll — apenas drag manual
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+    align: 'center',
+    skipSnaps: false,
+    dragFree: false,
+  })
 
   // Detecta mobile/desktop
   useEffect(() => {
@@ -62,52 +48,22 @@ export default function Section3Arts({ messages }: Section3ArtsProps) {
     return () => window.removeEventListener('resize', check)
   }, [])
 
-  // Detecção precisa do slide central usando selectedScrollSnap + scroll em tempo real
-  const updateCenter = useCallback(() => {
+  // Atualiza o índice do slide central a cada mudança
+  const onSelect = useCallback(() => {
     if (!emblaApi) return
-    const snaps = emblaApi.scrollSnapList()
-    const progress = emblaApi.scrollProgress()
-    let closestIdx = 0
-    let closestDist = Infinity
-    snaps.forEach((snap, i) => {
-      // Normaliza a distância considerando loop infinito
-      let dist = Math.abs(snap - progress)
-      if (dist > 0.5) dist = 1 - dist
-      if (dist < closestDist) {
-        closestDist = dist
-        closestIdx = i
-      }
-    })
-    setSelectedIndex(closestIdx)
+    setSelectedIndex(emblaApi.selectedScrollSnap())
   }, [emblaApi])
 
   useEffect(() => {
     if (!emblaApi) return
-
-    emblaApi.on('scroll', updateCenter)
-    emblaApi.on('select', updateCenter)
-    emblaApi.on('reInit', updateCenter)
-    updateCenter()
-
-    const autoScroll = emblaApi.plugins().autoScroll
-    if (!autoScroll) return
-    if (!autoScroll.isPlaying()) autoScroll.play()
-
-    // Retoma o auto-scroll após interação do usuário
-    const resumeAfterDrag = () => {
-      setTimeout(() => {
-        if (!autoScroll.isPlaying()) autoScroll.play()
-      }, 1200)
-    }
-    emblaApi.on('pointerUp', resumeAfterDrag)
-
+    emblaApi.on('select', onSelect)
+    emblaApi.on('reInit', onSelect)
+    onSelect()
     return () => {
-      emblaApi.off('scroll', updateCenter)
-      emblaApi.off('select', updateCenter)
-      emblaApi.off('reInit', updateCenter)
-      emblaApi.off('pointerUp', resumeAfterDrag)
+      emblaApi.off('select', onSelect)
+      emblaApi.off('reInit', onSelect)
     }
-  }, [emblaApi, updateCenter])
+  }, [emblaApi, onSelect])
 
   // IntersectionObserver para animação de entrada
   useEffect(() => {
@@ -126,16 +82,10 @@ export default function Section3Arts({ messages }: Section3ArtsProps) {
 
   const { title, artworks } = messages.works
 
-  // Triplica os arrays para garantir faixa infinita sem saltos visíveis
-  const REPEAT = 3
-  const repeatedArtworks = Array.from({ length: REPEAT }, () => artworks).flat()
-  const repeatedImages = Array.from({ length: REPEAT }, () => artworkImages).flat()
-  const total = artworks.length
-
-  // Calcula scale, opacity e zIndex para cada card de forma independente
-  const getCardMotion = (flatIndex: number) => {
-    const isCenter = selectedIndex === flatIndex
-    const isHovered = hoveredIndex === flatIndex
+  // Calcula animação de cada card
+  const getCardMotion = (index: number) => {
+    const isCenter = selectedIndex === index
+    const isHovered = hoveredIndex === index
     const someoneHovered = hoveredIndex !== null
 
     if (!isMobile) {
@@ -144,7 +94,7 @@ export default function Section3Arts({ messages }: Section3ArtsProps) {
       return { scale: 1.0, opacity: 1, zIndex: 1 }
     }
 
-    // Mobile: card central é o foco
+    // Mobile: card central em destaque
     if (isCenter) return { scale: 1.07, opacity: 1, zIndex: 20 }
     return { scale: 0.90, opacity: 0.5, zIndex: 1 }
   }
@@ -174,15 +124,14 @@ export default function Section3Arts({ messages }: Section3ArtsProps) {
           ref={emblaRef}
         >
           <div className={section3Styles.emblaFlex}>
-            {repeatedArtworks.map((artwork, flatIndex) => {
-              const artIdx = flatIndex % total
-              const { scale, opacity, zIndex } = getCardMotion(flatIndex)
+            {artworks.map((artwork, index) => {
+              const { scale, opacity, zIndex } = getCardMotion(index)
               return (
                 <div
-                  key={flatIndex}
+                  key={index}
                   className={section3Styles.itemWrapper}
-                  style={{ perspective: '1000px', position: 'relative', zIndex }}
-                  onMouseEnter={() => setHoveredIndex(flatIndex)}
+                  style={{ position: 'relative', zIndex }}
+                  onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
                   <motion.div
@@ -194,24 +143,32 @@ export default function Section3Arts({ messages }: Section3ArtsProps) {
                       mass: 0.8,
                     }}
                     className={section3Styles.itemMotionBase}
-                    style={section3Styles.itemInlineHeight}
                   >
                     {/* Imagem da obra */}
                     <div className={section3Styles.imageContainer}>
                       <Image
-                        src={repeatedImages[flatIndex]}
+                        src={artwork.image}
                         alt={artwork.title}
                         fill
                         className={section3Styles.image}
-                        loading={artIdx < 2 ? 'eager' : 'lazy'}
+                        loading={index < 2 ? 'eager' : 'lazy'}
                       />
                     </div>
 
                     {/* Informações da obra */}
                     <div className={section3Styles.infoContainer}>
                       <h3 className={section3Styles.artworkTitle}>{artwork.title}</h3>
-                      <span className={section3Styles.techniqueBadge}>{artwork.technique}</span>
+                      <div className={section3Styles.tagsContainer}>
+                        {artwork.tags?.map((tag, i) => (
+                          <span key={i} className={section3Styles.techniqueBadge}>
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
                       <p className={section3Styles.artworkDescription}>{artwork.description}</p>
+                      {artwork.dimensions && (
+                        <p className={section3Styles.artworkDimensions}>{artwork.dimensions}</p>
+                      )}
                     </div>
                   </motion.div>
                 </div>
@@ -220,8 +177,6 @@ export default function Section3Arts({ messages }: Section3ArtsProps) {
           </div>
         </motion.div>
       </div>
-
-
     </div>
   )
 }

@@ -92,19 +92,19 @@ export default function Sidebar({ locale, onLocaleChange, messages }: SidebarPro
       const targetScrollTop = container.scrollTop + (elementRect.top - containerRect.top)
       const startScrollTop = container.scrollTop
       const distance = targetScrollTop - startScrollTop
-      const duration = 1000
+      const duration = 1200
       let startTime: number | null = null
 
-      // Easing function ease-out-cubic
-      const easeOutCubic = (t: number): number => {
-        return 1 - Math.pow(1 - t, 3)
+      // Easing function easeInOutCubic (suave no início e no fim)
+      const easeInOutCubic = (t: number): number => {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
       }
 
       const animateScroll = (currentTime: number) => {
         if (!startTime) startTime = currentTime
         const elapsed = currentTime - startTime
         const progress = Math.min(elapsed / duration, 1)
-        const ease = easeOutCubic(progress)
+        const ease = easeInOutCubic(progress)
 
         container.scrollTop = startScrollTop + distance * ease
 

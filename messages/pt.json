@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "João Mauricio | Escultor & Artista Plástico",
-    "description": "Portfólio de João Mauricio, escultor e artista plástico. Obras em bronze, mármore e materiais contemporâneos."
+    "title": "João Maurício | Escultor & Artista Plástico",
+    "description": "Portfólio de João Maurício, escultor e artista plástico. Obras em bronze, mármore e materiais contemporâneos."
   },
   "nav": {
     "hero": "Início",
@@ -11,7 +11,7 @@
     "contact": "Contato"
   },
   "hero": {
-    "name": "João Mauricio",
+    "name": "João Maurício",
     "profession": "Escultor / Artista Plástico",
     "bio": "Explorando a forma e o vazio através de materiais que resistem ao tempo. Minhas obras dialogam entre o clássico e o contemporâneo, buscando a essência da expressão humana.",
     "cta": "Ver obras"
@@ -26,34 +26,64 @@
     "title": "Obras",
     "artworks": [
       {
-        "title": "Silêncio Eterno",
-        "technique": "Bronze",
-        "description": "Série sobre contemplação e ausência. Fundição em cera perdida."
+        "title": "Asilo",
+        "tags": [
+          "Porcelana Fria",
+          "Resina"
+        ],
+        "description": "Uma peça de realismo profundo sobre vulnerabilidade e memória. A figura em porcelana segura um fragmento de papel, como quem guarda uma história inteira.",
+        "image": "/images/works/1_asilo.webp",
+        "dimensions": "37cm x 16cm"
+      },
+      {
+        "title": "Ritual",
+        "tags": [
+          "Porcelana Fria",
+          "Resina"
+        ],
+        "description": "Uma representação comovente de afeto e herança familiar. A escultura imortaliza um ritual profundo de cuidado, capturando a ternura intergeracional em um gesto simples.",
+        "image": "/images/works/2_ritual.webp",
+        "dimensions": "32cm x 36cm"
       },
       {
         "title": "Fluido Temporal",
-        "technique": "Mármore",
-        "description": "A metamorfose da pedra em movimento. Carrara italiano."
+        "tags": [
+          "Mármore"
+        ],
+        "description": "A metamorfose da pedra em movimento. Carrara italiano.",
+        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=500&fit=crop"
       },
       {
         "title": "Estrutura Invisível",
-        "technique": "Aço Corten",
-        "description": "Diálogo entre o peso e a leveza. Instalação urbana."
+        "tags": [
+          "Aço Corten"
+        ],
+        "description": "Diálogo entre o peso e a leveza. Instalação urbana.",
+        "image": "https://images.unsplash.com/photo-1561839561-b13bcfe95249?w=400&h=500&fit=crop"
       },
       {
         "title": "Gesto Imóvel",
-        "technique": "Resina",
-        "description": "Capturando o instante antes da ação. Série performática."
+        "tags": [
+          "Resina"
+        ],
+        "description": "Capturando o instante antes da ação. Série performática.",
+        "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400&h=500&fit=crop"
       },
       {
         "title": "Véu de Isis",
-        "technique": "Granito",
-        "description": "Texturas que revelam e ocultam simultaneamente."
+        "tags": [
+          "Granito"
+        ],
+        "description": "Texturas que revelam e ocultam simultaneamente.",
+        "image": "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=400&h=500&fit=crop"
       },
       {
         "title": "Respiração",
-        "technique": "Madeira",
-        "description": "Ciclo de expansão e contração. Imbuia envelhecida."
+        "tags": [
+          "Madeira"
+        ],
+        "description": "Ciclo de expansão e contração. Imbuia envelhecida.",
+        "image": "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=400&h=500&fit=crop"
       }
     ]
   },

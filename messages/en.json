@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "João Mauricio | Sculptor & Visual Artist",
-    "description": "Portfolio of João Mauricio, sculptor and visual artist. Works in bronze, marble and contemporary materials."
+    "title": "João Maurício | Sculptor & Visual Artist",
+    "description": "Portfolio of João Maurício, sculptor and visual artist. Works in bronze, marble and contemporary materials."
   },
   "nav": {
     "hero": "Home",
@@ -11,7 +11,7 @@
     "contact": "Contact"
   },
   "hero": {
-    "name": "João Mauricio",
+    "name": "João Maurício",
     "profession": "Sculptor / Visual Artist",
     "bio": "Exploring form and void through materials that resist time. My works dialogue between the classic and the contemporary, seeking the essence of human expression.",
     "cta": "See works"
@@ -26,34 +26,64 @@
     "title": "Works",
     "artworks": [
       {
-        "title": "Eternal Silence",
-        "technique": "Bronze",
-        "description": "Series on contemplation and absence. Lost wax casting."
+        "title": "Asylum",
+        "tags": [
+          "Cold Porcelain",
+          "Resin"
+        ],
+        "description": "A piece of profound realism about vulnerability and memory. The porcelain figure holds a paper fragment, like someone guarding an entire story.",
+        "image": "/images/works/1_asilo.webp",
+        "dimensions": "37cm x 16cm"
+      },
+      {
+        "title": "Ritual",
+        "tags": [
+          "Cold Porcelain",
+          "Resin"
+        ],
+        "description": "A moving representation of affection and family heritage. The sculpture immortalizes a profound ritual of care, capturing intergenerational tenderness in a simple gesture.",
+        "image": "/images/works/2_ritual.webp",
+        "dimensions": "32cm x 36cm"
       },
       {
         "title": "Fluid Time",
-        "technique": "Marble",
-        "description": "The metamorphosis of stone into movement. Italian Carrara."
+        "tags": [
+          "Marble"
+        ],
+        "description": "The metamorphosis of stone into movement. Italian Carrara.",
+        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=500&fit=crop"
       },
       {
         "title": "Invisible Structure",
-        "technique": "Corten Steel",
-        "description": "Dialogue between weight and lightness. Urban installation."
+        "tags": [
+          "Corten Steel"
+        ],
+        "description": "Dialogue between weight and lightness. Urban installation.",
+        "image": "https://images.unsplash.com/photo-1561839561-b13bcfe95249?w=400&h=500&fit=crop"
       },
       {
         "title": "Still Gesture",
-        "technique": "Resin",
-        "description": "Capturing the moment before action. Performative series."
+        "tags": [
+          "Resin"
+        ],
+        "description": "Capturing the moment before action. Performative series.",
+        "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400&h=500&fit=crop"
       },
       {
         "title": "Veil of Isis",
-        "technique": "Granite",
-        "description": "Textures that reveal and conceal simultaneously."
+        "tags": [
+          "Granite"
+        ],
+        "description": "Textures that reveal and conceal simultaneously.",
+        "image": "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=400&h=500&fit=crop"
       },
       {
         "title": "Breath",
-        "technique": "Wood",
-        "description": "Cycle of expansion and contraction. Aged Imbuia."
+        "tags": [
+          "Wood"
+        ],
+        "description": "Cycle of expansion and contraction. Aged Imbuia.",
+        "image": "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=400&h=500&fit=crop"
       }
     ]
   },

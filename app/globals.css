@@ -28,17 +28,15 @@ html {
   }
 }
 
-/* Container de scroll snap */
+/* Container de scroll - sem snap agressivo */
 .snap-container {
-  scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
   scroll-behavior: smooth;
 }
 
 .snap-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  /* Removido o scroll-snap-align para ficar mais suave */
 }
 
 body {
@@ -50,16 +48,13 @@ body {
   overflow-x: hidden;
 }
 
-/* Scroll snap para as seções principais */
+/* Container de scroll - repetido */
 .snap-container {
-  scroll-snap-type: y mandatory;
   overflow-y: auto;
   height: 100vh;
 }
 
 .snap-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
 }
 
 /* Custom scrollbar minimalista */
