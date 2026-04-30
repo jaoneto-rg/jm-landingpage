@@ -61,11 +61,11 @@ Anteriormente focada em um canvas interativo com Three.js, esta seção evoluiu 
 - **Ficha Técnica**: Ao lado da imagem, as informações técnicas da obra são dispostas de maneira tabular e limpa (Ano, Dimensões, Edição, Material), no melhor estilo de galerias de arte.
 - **Animações Coordenadas**: A imagem principal, o overlay 3D e as informações textuais entram na tela em momentos ligeiramente diferentes (delays em cascata), criando uma experiência de leitura fluida.
 
-### Carrosséis (Embla)
-- Auto-scroll a cada 8 segundos
-- Loop infinito suave
-- Pausa ao interagir (mouse/touch)
-- Indicadores de progresso
+### Seções 3 e 4: Galerias e Trajetória (Embla)
+- **Mock de Dados no i18n:** Todo o conteúdo (títulos, descrições, múltiplas tags, dimensões e links de imagens) foi consolidado dentro dos arquivos `pt.json` e `en.json`. Isso transforma o sistema de traduções em um banco de dados estático, limpando os componentes de UI e facilitando muito a adição de novas obras.
+- **Cards Responsivos Inteligentes:** As proporções dos cards de obras se adaptam à tela, aumentando a altura e relaxando o limite de quebra de linhas (`line-clamp`) no mobile para garantir que descrições mais longas fiquem visíveis.
+- **Micro-interações:** Espaçamentos verticais internos (`padding-y`) calibrados para garantir que os cards possam crescer (`scale`) livremente durante o `hover` do mouse sem que as extremidades sejam cortadas pelo container.
+- **Otimização de Imagens:** Preparado para formato WebP, garantindo altíssima qualidade visual nas fotos das esculturas aliado a baixo peso e alta velocidade de carregamento.
 
 ### Contato
 - Ícones SVG puros (sem bibliotecas externas)
