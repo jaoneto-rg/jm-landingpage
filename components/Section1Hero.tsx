@@ -154,8 +154,8 @@ export default function Section1Hero({ messages }: Section1HeroProps) {
                 style={heroStyles.photoPlaceholderInline}
               >
   <Image
-                  src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?w=600&h=800&fit=crop"
-                  alt="Foto do artista"
+                  src="/images/artist/joaomauricio.webp"
+                  alt="Foto de João Maurício"
                   fill
                   className={heroStyles.image}
                   style={heroStyles.imageInline}
