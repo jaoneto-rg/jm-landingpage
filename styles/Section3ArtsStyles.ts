@@ -40,7 +40,10 @@ export const section3Styles = {
   tagsContainer: "flex flex-wrap gap-2 mb-4",
   techniqueBadge:
     "inline-block px-3 py-1 bg-zinc-700 text-zinc-300 text-xs rounded-full",
-  artworkDescription: "text-zinc-400 text-sm leading-relaxed line-clamp-6",
+  artworkDescription: "text-zinc-400 text-sm leading-relaxed line-clamp-6 whitespace-pre-line",
+  priceAndContactContainer: "flex items-center justify-between mt-2",
+  artworkPrice: "text-white font-medium",
   artworkDimensions: "text-zinc-500 text-xs font-mono mt-auto pt-1 border-t border-zinc-800",
+  whatsappButton: "ml-auto flex items-center justify-center bg-[#25D366] hover:bg-[#1ebd5a] transition-colors text-white rounded-full w-8 h-8 flex-shrink-0",
 
 };

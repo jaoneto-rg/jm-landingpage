@@ -24,14 +24,17 @@
   },
   "works": {
     "title": "Works",
+    "whatsappTemplate": "Hello! I felt a very special connection with the artwork {title} and would love to know a bit more about its history and creation. Could you give me more information?",
     "artworks": [
       {
         "title": "Asylum",
         "tags": [
           "Cold Porcelain",
-          "Resin"
+          "Resin",
+          "Sold"
         ],
-        "description": "A piece of profound realism about vulnerability and memory. The porcelain figure holds a paper fragment, like someone guarding an entire story.",
+        "description": "Reserved Artwork",
+        "price": "R$: 1.800,00",
         "image": "/images/works/1_asilo.webp",
         "dimensions": "37cm x 16cm"
       },
@@ -39,51 +42,200 @@
         "title": "Ritual",
         "tags": [
           "Cold Porcelain",
-          "Resin"
+          "Resin",
+          "Sold"
         ],
-        "description": "A moving representation of affection and family heritage. The sculpture immortalizes a profound ritual of care, capturing intergenerational tenderness in a simple gesture.",
+        "description": "Reserved Artwork",
+        "price": "R$: 2.400,00",
         "image": "/images/works/2_ritual.webp",
         "dimensions": "32cm x 36cm"
       },
       {
-        "title": "Fluid Time",
+        "title": "Brincadeira Sem Fim",
+        "image": "/images/works/3_brincadeirasemfim.webp",
         "tags": [
-          "Marble"
-        ],
-        "description": "The metamorphosis of stone into movement. Italian Carrara.",
-        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=500&fit=crop"
-      },
-      {
-        "title": "Invisible Structure",
-        "tags": [
-          "Corten Steel"
-        ],
-        "description": "Dialogue between weight and lightness. Urban installation.",
-        "image": "https://images.unsplash.com/photo-1561839561-b13bcfe95249?w=400&h=500&fit=crop"
-      },
-      {
-        "title": "Still Gesture",
-        "tags": [
+          "Cold Porcelain",
           "Resin"
         ],
-        "description": "Capturing the moment before action. Performative series.",
-        "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400&h=500&fit=crop"
+        "dimensions": "38cm x 56cm x 40cm",
+        "price": "R$: 2.200,00"
       },
       {
-        "title": "Veil of Isis",
+        "title": "Sociedade cansada",
+        "image": "/images/works/4_sociedadecansada.webp",
         "tags": [
-          "Granite"
+          "Cold Porcelain",
+          "Resin"
         ],
-        "description": "Textures that reveal and conceal simultaneously.",
-        "image": "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=400&h=500&fit=crop"
+        "dimensions": "21cm x 23cm",
+        "price": "R$: 1.600,00"
       },
       {
-        "title": "Breath",
+        "title": "TeMpO",
+        "image": "/images/works/5_tempo.webp",
         "tags": [
-          "Wood"
+          "Cold Porcelain",
+          "Resin"
         ],
-        "description": "Cycle of expansion and contraction. Aged Imbuia.",
-        "image": "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=400&h=500&fit=crop"
+        "dimensions": "31cm x 10cm",
+        "price": "R$: 1.200,00"
+      },
+      {
+        "title": "Descanso",
+        "image": "/images/works/6_descanso.webp",
+        "tags": [
+          "Cold Porcelain",
+          "Resin"
+        ],
+        "dimensions": "38cm x 4cm",
+        "price": "R$: 1.100,00"
+      },
+      {
+        "title": "O suor nosso de cada dia",
+        "image": "/images/works/7_osuor.webp",
+        "tags": [
+          "Cold Porcelain",
+          "Resin"
+        ],
+        "dimensions": "30cm x 20cm",
+        "price": "R$: 1.800,00"
+      },
+      {
+        "title": "Contadora de histórias",
+        "image": "/images/works/8_contadora.webp",
+        "tags": [
+          "Cold Porcelain",
+          "Resin"
+        ],
+        "dimensions": "27cm x 40cm",
+        "price": "R$: 1.600,00"
+      },
+      {
+        "title": "Perda da Inocência",
+        "image": "/images/works/9_perda.webp",
+        "tags": [
+          "Cold Porcelain",
+          "Resin"
+        ],
+        "dimensions": "42cm x 24cm",
+        "price": "R$: 2.400,00"
+      },
+      {
+        "title": "Olhar Azul",
+        "image": "/images/works/10_olhar.webp",
+        "description": "Artwork in giveaway",
+        "tags": [
+          "Cold Porcelain",
+          "Resin"
+        ],
+        "dimensions": "38cm x 22cm",
+        "price": "Contact for details"
+      },
+      {
+        "title": "O Declinio da Arte",
+        "image": "/images/works/11_declinio.webp",
+        "tags": [
+          "Cold Porcelain",
+          "Resin"
+        ],
+        "dimensions": "42cm x 22cm",
+        "price": "R$: 2.000,00"
+      },
+      {
+        "title": "Senhora com Cachorro",
+        "image": "/images/works/12_senhora.webp",
+        "description": "Reserved Artwork",
+        "tags": [
+          "Cold Porcelain",
+          "Resin",
+          "Sold"
+        ],
+        "dimensions": "43cm x 20cm",
+        "price": "R$: 2.400,00"
+      },
+      {
+        "title": "Entre o Silêncio e o Movimento",
+        "image": "/images/works/13_silencioemovimento.webp",
+        "tags": [
+          "Cold Porcelain",
+          "Resin"
+        ],
+        "dimensions": "24cm x 16cm",
+        "price": "R$: 1.100,00"
+      },
+      {
+        "title": "Mutter",
+        "image": "/images/works/14_mutter.webp",
+        "tags": [
+          "Cold Porcelain",
+          "Resin"
+        ],
+        "dimensions": "40cm x 20cm",
+        "price": "R$: 1.800,00"
+      },
+      {
+        "title": "O Psicanalista",
+        "image": "/images/works/15_psicanalista.webp",
+        "description": "Reserved Artwork",
+        "tags": [
+          "Cold Porcelain",
+          "Resin",
+          "Sold"
+        ],
+        "dimensions": "58cm x 24cm",
+        "price": "R$: 2,500.00"
+      },
+      {
+        "title": "Solidão",
+        "image": "/images/works/16_solidao.webp",
+        "tags": [
+          "Cold Porcelain",
+          "Resin"
+        ],
+        "dimensions": "38cm x 22cm",
+        "price": "R$: 1.800,00"
+      },
+      {
+        "title": "O Parto",
+        "image": "/images/works/17_parto.webp",
+        "tags": [
+          "Cold Porcelain",
+          "Resin"
+        ],
+        "dimensions": "36cm x 23cm",
+        "price": "R$: 1.200,00"
+      },
+      {
+        "title": "Insônia",
+        "image": "/images/works/18_insonia.webp",
+        "description": "Reserved Artwork",
+        "tags": [
+          "Cold Porcelain",
+          "Resin",
+          "Sold"
+        ],
+        "dimensions": "20cm x 56cm x 36cm",
+        "price": "R$: 6.000,00"
+      },
+      {
+        "title": "O Ego",
+        "image": "/images/works/19_ego.webp",
+        "description": "Artwork Unavailable",
+        "tags": [
+          "Cold Porcelain",
+          "Resin"
+        ],
+        "dimensions": "60cm x 178cm x 100cm"
+      },
+      {
+        "title": "Dei a Minha Vida",
+        "image": "/images/works/20_minhavida.webp",
+        "tags": [
+          "Cold Porcelain",
+          "Resin"
+        ],
+        "dimensions": "52cm x 40cm x 30cm",
+        "price": "R$: 2.000,00"
       }
     ]
   },
@@ -166,9 +318,9 @@
   },
   "contact": {
     "title": "Contact",
-    "whatsapp": "+55 (82) 99999-9999",
-    "email": "contato@joaomauricio.art",
-    "instagram": "@joaomauricio.art"
+    "whatsapp": "+55 (82) 98873-6558",
+    "email": "joaomauricioartista@gmail.com",
+    "instagram": "@joaomauricioartista"
   },
   "footer": {
     "rights": "© 2025 João A. M. Neto. All rights reserved.",

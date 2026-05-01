@@ -24,14 +24,17 @@
   },
   "works": {
     "title": "Obras",
+    "whatsappTemplate": "Olá! Senti uma conexão muito especial com a obra {title} e adoraria conhecer um pouco mais sobre a história e a criação dela. Poderia me dar mais informações?",
     "artworks": [
       {
         "title": "Asilo",
         "tags": [
           "Porcelana Fria",
-          "Resina"
+          "Resina",
+          "Vendida"
         ],
-        "description": "Uma peça de realismo profundo sobre vulnerabilidade e memória. A figura em porcelana segura um fragmento de papel, como quem guarda uma história inteira.",
+        "description": "Obra Reservada",
+        "price": "R$: 1.800,00",
         "image": "/images/works/1_asilo.webp",
         "dimensions": "37cm x 16cm"
       },
@@ -39,51 +42,200 @@
         "title": "Ritual",
         "tags": [
           "Porcelana Fria",
-          "Resina"
+          "Resina",
+          "Vendida"
         ],
-        "description": "Uma representação comovente de afeto e herança familiar. A escultura imortaliza um ritual profundo de cuidado, capturando a ternura intergeracional em um gesto simples.",
+        "description": "Obra Reservada",
+        "price": "R$: 2.400,00",
         "image": "/images/works/2_ritual.webp",
         "dimensions": "32cm x 36cm"
       },
       {
-        "title": "Fluido Temporal",
+        "title": "Brincadeira Sem Fim",
+        "image": "/images/works/3_brincadeirasemfim.webp",
         "tags": [
-          "Mármore"
-        ],
-        "description": "A metamorfose da pedra em movimento. Carrara italiano.",
-        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=500&fit=crop"
-      },
-      {
-        "title": "Estrutura Invisível",
-        "tags": [
-          "Aço Corten"
-        ],
-        "description": "Diálogo entre o peso e a leveza. Instalação urbana.",
-        "image": "https://images.unsplash.com/photo-1561839561-b13bcfe95249?w=400&h=500&fit=crop"
-      },
-      {
-        "title": "Gesto Imóvel",
-        "tags": [
+          "Percelana Fria",
           "Resina"
         ],
-        "description": "Capturando o instante antes da ação. Série performática.",
-        "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400&h=500&fit=crop"
+        "dimensions": "38cm x 56cm x 40cm",
+        "price": "R$: 2.200,00"
       },
       {
-        "title": "Véu de Isis",
+        "title": "Sociedade cansada",
+        "image": "/images/works/4_sociedadecansada.webp",
         "tags": [
-          "Granito"
+          "Percelana Fria",
+          "Resina"
         ],
-        "description": "Texturas que revelam e ocultam simultaneamente.",
-        "image": "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=400&h=500&fit=crop"
+        "dimensions": "21cm x 23cm",
+        "price": "R$: 1.600,00"
       },
       {
-        "title": "Respiração",
+        "title": "TeMpO",
+        "image": "/images/works/5_tempo.webp",
         "tags": [
-          "Madeira"
+          "Percelana Fria",
+          "Resina"
         ],
-        "description": "Ciclo de expansão e contração. Imbuia envelhecida.",
-        "image": "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=400&h=500&fit=crop"
+        "dimensions": "31cm x 10cm",
+        "price": "R$: 1.200,00"
+      },
+      {
+        "title": "Descanso",
+        "image": "/images/works/6_descanso.webp",
+        "tags": [
+          "Percelana Fria",
+          "Resina"
+        ],
+        "dimensions": "38cm x 4cm",
+        "price": "R$: 1.100,00"
+      },
+      {
+        "title": "O suor nosso de cada dia",
+        "image": "/images/works/7_osuor.webp",
+        "tags": [
+          "Percelana Fria",
+          "Resina"
+        ],
+        "dimensions": "30cm x 20cm",
+        "price": "R$: 1.800,00"
+      },
+      {
+        "title": "Contadora de histórias",
+        "image": "/images/works/8_contadora.webp",
+        "tags": [
+          "Percelana Fria",
+          "Resina"
+        ],
+        "dimensions": "27cm x 40cm",
+        "price": "R$: 1.600,00"
+      },
+      {
+        "title": "Perda da Inocência",
+        "image": "/images/works/9_perda.webp",
+        "tags": [
+          "Percelana Fria",
+          "Resina"
+        ],
+        "dimensions": "42cm x 24cm",
+        "price": "R$: 2.400,00"
+      },
+      {
+        "title": "Olhar Azul",
+        "image": "/images/works/10_olhar.webp",
+        "description": "Obra em sorteio",
+        "tags": [
+          "Percelana Fria",
+          "Resina"
+        ],
+        "dimensions": "38cm x 22cm",
+        "price": "Interessados entrar em contato"
+      },
+      {
+        "title": "O Declinio da Arte",
+        "image": "/images/works/11_declinio.webp",
+        "tags": [
+          "Percelana Fria",
+          "Resina"
+        ],
+        "dimensions": "42cm x 22cm",
+        "price": "R$: 2.000,00"
+      },
+      {
+        "title": "Senhora com Cachorro",
+        "image": "/images/works/12_senhora.webp",
+        "description": "Obra Reservada",
+        "tags": [
+          "Percelana Fria",
+          "Resina",
+          "Vendida"
+        ],
+        "dimensions": "43cm x 20cm",
+        "price": "R$: 2.400,00"
+      },
+      {
+        "title": "Entre o Silêncio e o Movimento",
+        "image": "/images/works/13_silencioemovimento.webp",
+        "tags": [
+          "Percelana Fria",
+          "Resina"
+        ],
+        "dimensions": "24cm x 16cm",
+        "price": "R$: 1.100,00"
+      },
+      {
+        "title": "Mutter",
+        "image": "/images/works/14_mutter.webp",
+        "tags": [
+          "Percelana Fria",
+          "Resina"
+        ],
+        "dimensions": "40cm x 20cm",
+        "price": "R$: 1.800,00"
+      },
+      {
+        "title": "O Psicanalista",
+        "image": "/images/works/15_psicanalista.webp",
+        "description": "Obra Reservada",
+        "tags": [
+          "Percelana Fria",
+          "Resina",
+          "Vendida"
+        ],
+        "dimensions": "58cm x 24cm",
+        "price": "R$: 2,500.00"
+      },
+      {
+        "title": "Solidão",
+        "image": "/images/works/16_solidao.webp",
+        "tags": [
+          "Percelana Fria",
+          "Resina"
+        ],
+        "dimensions": "38cm x 22cm",
+        "price": "R$: 1.800,00"
+      },
+      {
+        "title": "O Parto",
+        "image": "/images/works/17_parto.webp",
+        "tags": [
+          "Percelana Fria",
+          "Resina"
+        ],
+        "dimensions": "36cm x 23cm",
+        "price": "R$: 1.200,00"
+      },
+      {
+        "title": "Insônia",
+        "image": "/images/works/18_insonia.webp",
+        "description": "Obra Reservada",
+        "tags": [
+          "Percelana Fria",
+          "Resina",
+          "Vendida"
+        ],
+        "dimensions": "20cm x 56cm x 36cm",
+        "price": "R$: 6.000,00"
+      },
+      {
+        "title": "O Ego",
+        "image": "/images/works/19_ego.webp",
+        "description": "Obra Indisponível",
+        "tags": [
+          "Percelana Fria",
+          "Resina"
+        ],
+        "dimensions": "60cm x 178cm x 100cm"
+      },
+      {
+        "title": "Dei a Minha Vida",
+        "image": "/images/works/20_minhavida.webp",
+        "tags": [
+          "Percelana Fria",
+          "Resina"
+        ],
+        "dimensions": "52cm x 40cm x 30cm",
+        "price": "R$: 2.000,00"
       }
     ]
   },
@@ -166,9 +318,9 @@
   },
   "contact": {
     "title": "Contato",
-    "whatsapp": "+55 (82) 99999-9999",
-    "email": "contato@joaomauricio.art",
-    "instagram": "@joaomauricio.art"
+    "whatsapp": "+55 (82) 98873-6558",
+    "email": "joaomauricioartista@gmail.com",
+    "instagram": "@joaomauricioartista"
   },
   "footer": {
     "rights": "© 2025 João A. M. Neto. Todos os direitos reservados.",
