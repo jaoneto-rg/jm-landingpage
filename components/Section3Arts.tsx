@@ -9,7 +9,7 @@ import { section3Styles } from '../styles/Section3ArtsStyles'
 interface Artwork {
   title: string
   tags: string[]
-  description: string
+  description?: string
   image: string
   dimensions?: string
   price?: string
