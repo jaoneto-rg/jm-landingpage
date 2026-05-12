@@ -4,7 +4,7 @@ export const section3Styles = {
   container: "relative w-full min-h-screen bg-black flex flex-col justify-center py-20",
 
   // Title
-  titleContainer: "px-6 sm:px-12 lg:px-20 mb-12",
+  titleContainer: "px-6 sm:px-12 lg:px-20 mb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-4",
   title: "text-white text-3xl sm:text-4xl font-light",
 
   // Carousel Wrapper & Overlays

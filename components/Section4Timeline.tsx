@@ -34,8 +34,8 @@ export default function Section4Timeline({ messages }: Section4TimelineProps) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   const items = messages.journey.items
-  // Duplicar itens se houver poucos, para garantir o loop contínuo sem quebras no Embla
-  const displayItems = items.length < 4 ? [...items, ...items, ...items] : items
+  // Multiplicar os itens para garantir o loop contínuo e suave sem espaços em branco (igual na Seção 3 que tem muitas obras)
+  const displayItems = [...items, ...items, ...items, ...items]
 
   // Sem auto-scroll — apenas drag manual
   const [emblaRef, emblaApi] = useEmblaCarousel({

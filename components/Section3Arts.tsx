@@ -36,6 +36,7 @@ export default function Section3Arts({ messages }: Section3ArtsProps) {
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const [isMobile, setIsMobile] = useState(false)
+  const [showOnlyAvailable, setShowOnlyAvailable] = useState(false)
 
   // Sem auto-scroll — apenas drag manual
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -88,6 +89,22 @@ export default function Section3Arts({ messages }: Section3ArtsProps) {
   const { title, artworks, whatsappTemplate } = messages.works
   const waNumber = messages.contact.whatsapp.replace(/\D/g, '')
 
+  const isArtworkSold = (artwork: Artwork) => {
+    const descLower = artwork.description?.toLowerCase() || ''
+    return artwork.tags?.some(t => t.toLowerCase() === 'vendida' || t.toLowerCase() === 'sold') ||
+      descLower.includes('reservada') || 
+      descLower.includes('reserved') ||
+      descLower.includes('indisponível') ||
+      descLower.includes('unavailable')
+  }
+
+  const displayedArtworks = showOnlyAvailable ? artworks.filter(a => !isArtworkSold(a)) : artworks
+  
+  // Multiplicar os itens se a lista filtrada for muito curta para garantir o loop contínuo do Embla
+  const finalArtworks = displayedArtworks.length > 0 && displayedArtworks.length < 10 
+    ? [...displayedArtworks, ...displayedArtworks, ...displayedArtworks, ...displayedArtworks] 
+    : displayedArtworks
+
   // Calcula animação de cada card
   const getCardMotion = (index: number) => {
     const isCenter = selectedIndex === index
@@ -115,6 +132,26 @@ export default function Section3Arts({ messages }: Section3ArtsProps) {
         className={section3Styles.titleContainer}
       >
         <h2 className={section3Styles.title}>{title}</h2>
+        
+        {/* Toggle Switch */}
+        <div className="flex items-center gap-3">
+          <span className={`text-sm transition-colors duration-300 ${showOnlyAvailable ? 'text-zinc-300' : 'text-zinc-500'}`}>
+            {title === 'Obras' ? 'Apenas Disponíveis' : 'Available Only'}
+          </span>
+          <button
+            onClick={() => setShowOnlyAvailable(!showOnlyAvailable)}
+            className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-300 focus:outline-none ${
+              showOnlyAvailable ? 'bg-zinc-200' : 'bg-zinc-700'
+            }`}
+            aria-label="Toggle available artworks only"
+          >
+            <span
+              className={`inline-block h-4 w-4 transform rounded-full transition-transform duration-300 ${
+                showOnlyAvailable ? 'translate-x-6 bg-zinc-900' : 'translate-x-1 bg-zinc-400'
+              }`}
+            />
+          </button>
+        </div>
       </motion.div>
 
       {/* Carrossel Wrapper com fade nas bordas */}
@@ -130,18 +167,12 @@ export default function Section3Arts({ messages }: Section3ArtsProps) {
           ref={emblaRef}
         >
           <div className={section3Styles.emblaFlex}>
-            {artworks.map((artwork, index) => {
+            {finalArtworks.map((artwork, index) => {
               const { scale, opacity, zIndex } = getCardMotion(index)
               const isHovered = hoveredIndex === index
               const isCenter = selectedIndex === index
               const showWhatsApp = isMobile ? isCenter : isHovered
-              const descLower = artwork.description?.toLowerCase() || ''
-              const isSold = 
-                artwork.tags?.some(t => t.toLowerCase() === 'vendida' || t.toLowerCase() === 'sold') ||
-                descLower.includes('reservada') || 
-                descLower.includes('reserved') ||
-                descLower.includes('indisponível') ||
-                descLower.includes('unavailable')
+              const isSold = isArtworkSold(artwork)
 
               return (
                 <div

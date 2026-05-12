@@ -243,6 +243,14 @@
     "title": "Trajetória",
     "items": [
       {
+        "title": "Evento Maceió +Criativa (World Creativity Day)",
+        "tag": "Exposição",
+        "date": "Abril - 2025",
+        "location": "Centro de Inovações (Maceió-AL)",
+        "description": "Exposição coletiva em celebração ao Dia Mundial da Criatividade. Participação como artista convidado, expondo obras e realizando uma apresentação especial sobre a escultura representativa de Van Gogh.",
+        "image": "/images/workshops/maceio-creativa.jpg"
+      },
+      {
         "title": "Workshop Rosto realista em porcelana fria",
         "tag": "Workshop",
         "date": "Junho/Julho - 2025",
@@ -264,7 +272,7 @@
         "date": "Abril/Maio - 2026",
         "location": "Complexo Cultural Teatro Deodoro (Maceió-AL)",
         "description": "Exposição individual apresentando 20 obras hiper-realistas inéditas que compõem o espaço da galeria. A mostra propõe um mergulho profundo na nossa essência, unindo técnica e reflexão humana.",
-        "image": "/images/exposition/exposition_deodoro.png",
+        "image": "/images/workshops/hipo-realismo.jpg",
         "link": "https://globoplay.globo.com/v/14577533/"
       }
     ]

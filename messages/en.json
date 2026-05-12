@@ -243,6 +243,14 @@
     "title": "Journey",
     "items": [
       {
+        "title": "Maceió +Criativa Event (World Creativity Day)",
+        "tag": "Exhibition",
+        "date": "April - 2025",
+        "location": "Innovation Center (Maceió-AL)",
+        "description": "Group exhibition celebrating World Creativity Day. Participated as a guest artist, exhibiting works and giving a special presentation on the Van Gogh sculpture.",
+        "image": "/images/workshops/maceio-creativa.jpg"
+      },
+      {
         "title": "Realistic Face Workshop in Cold Porcelain",
         "tag": "Workshop",
         "date": "June/July - 2025",
@@ -264,7 +272,7 @@
         "date": "April/May - 2026",
         "location": "Complexo Cultural Teatro Deodoro (Maceió-AL)",
         "description": "Solo exhibition featuring 20 new hyper-realistic artworks filling the gallery space. The showcase invites the public to a deep reflection on our human essence, combining high-level technique and emotion.",
-        "image": "/images/exposition/exposition_deodoro.png",
+        "image": "/images/workshops/hipo-realismo.jpg",
         "link": "https://globoplay.globo.com/v/14577533/"
       }
     ]
