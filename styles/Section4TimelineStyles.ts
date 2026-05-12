@@ -22,17 +22,17 @@ export const section4Styles = {
   } as React.CSSProperties,
 
   // Embla — sem gap no flex, espaçamento via margin em cada slide
-  emblaContainer: "overflow-hidden px-6 sm:px-12 lg:px-20",
+  emblaContainer: "overflow-hidden px-6 sm:px-12 lg:px-20 py-10",
   emblaFlex: "flex",
 
   // Timeline Item — marginLeft garante espaço igual inclusive nos clones do loop
-  itemWrapper: "flex-shrink-0 w-[320px] sm:w-[360px] ml-5",
+  itemWrapper: "flex-shrink-0 w-[320px] sm:w-[360px] ml-5 h-auto",
   itemMotionBase:
-    "bg-zinc-900 border border-zinc-800 overflow-hidden cursor-pointer " +
+    "bg-zinc-900 border border-zinc-800 overflow-hidden cursor-pointer flex flex-col h-full " +
     "hover:border-zinc-600 transition-colors duration-300 origin-center",
 
   // Item Image
-  imageContainer: "relative h-[200px] overflow-hidden",
+  imageContainer: "relative h-[200px] overflow-hidden flex-shrink-0",
   image: "object-cover transition-transform duration-500",
 
   // Tag
@@ -40,9 +40,9 @@ export const section4Styles = {
   tagBase: "px-3 py-1 text-xs font-medium rounded-full",
 
   // Item Content
-  contentContainer: "p-6",
+  contentContainer: "p-6 flex flex-col flex-grow",
   itemTitle: "text-white font-medium text-lg mb-2 line-clamp-2",
   itemDate: "text-zinc-500 text-sm mb-1",
   itemLocation: "text-zinc-400 text-sm mb-3",
-  itemDescription: "text-zinc-500 text-sm line-clamp-3",
+  itemDescription: "text-zinc-500 text-sm",
 };

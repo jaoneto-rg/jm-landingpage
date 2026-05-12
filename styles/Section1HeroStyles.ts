@@ -5,10 +5,11 @@ export const heroStyles = {
   
   // Left block - Text
   textBlock: "w-full lg:w-1/2 flex flex-col items-center text-center lg:items-end lg:text-right space-y-8",
-  name: "text-white font-light leading-tight",
+  name: "text-white font-bold",
   nameInline: {
     fontSize: 'clamp(3rem, 8vw, 6rem)',
     letterSpacing: '-0.02em',
+    lineHeight: '0.9',
   },
   profession: "text-zinc-400 text-lg sm:text-xl tracking-wide",
   bio: "text-zinc-400 text-base sm:text-lg max-w-xl leading-relaxed",

@@ -243,76 +243,29 @@
     "title": "Journey",
     "items": [
       {
-        "title": "Forms of the Invisible",
+        "title": "Realistic Face Workshop in Cold Porcelain",
+        "tag": "Workshop",
+        "date": "June/July - 2025",
+        "location": "Espaço Terra Viva Expressão e Arte",
+        "description": "Workshop held at Espaço Terra Viva Expressão e Arte, where mini faces in cold porcelain were produced, aiming to transmit knowledge about Hyper-realistic Sculpture. Teaching modeling and texture techniques.",
+        "image": "/images/workshops/workshop_hiperrealismo.jpg"
+      },
+      {
+        "title": "Children's Cold Porcelain Sculpture Workshop",
+        "tag": "Workshop",
+        "date": "September - 2025",
+        "location": "Espaço Terra Viva Expressão e Arte",
+        "description": "Workshop held at Espaço Terra Viva Expressão e Arte, aiming to bring children's creativity to the surface in a moment of fun and relaxation.",
+        "image": "/images/workshops/workshop_infantil.jpg"
+      },
+      {
+        "title": "Hyper-realism Exhibition: A Dive into What Made Us Human",
         "tag": "Exhibition",
-        "date": "Mar - Jun 2024",
-        "location": "Museum of Modern Art, São Paulo",
-        "description": "Solo exhibition with 12 new works exploring the materiality of absence.",
-        "image": "https://images.unsplash.com/photo-1549887534-1541e9326642?w=600&h=400&fit=crop"
-      },
-      {
-        "title": "Advanced Clay Modeling",
-        "tag": "Class",
-        "date": "2024 - Present",
-        "location": "School of Fine Arts, UFRJ",
-        "description": "Semester workshop on modeling techniques for figurative and abstract sculpture.",
-        "image": "https://images.unsplash.com/photo-1561839561-b13bcfe95249?w=600&h=400&fit=crop"
-      },
-      {
-        "title": "Living Memory",
-        "tag": "Project",
-        "date": "2024 - In progress",
-        "location": "Various neighborhoods, São Paulo",
-        "description": "Community sculpture project co-created with residents from different regions of the city.",
-        "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&h=400&fit=crop"
-      },
-      {
-        "title": "Contemporary Brazilian Sculpture",
-        "tag": "Exhibition",
-        "date": "Nov 2023 - Feb 2024",
-        "location": "Pinacoteca do Estado, São Paulo",
-        "description": "Group show with 15 national artists in dialogue with the architectural space.",
-        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop"
-      },
-      {
-        "title": "Art and Urban Space",
-        "tag": "Class",
-        "date": "2023 - 2024",
-        "location": "Sesc Avenida Paulista",
-        "description": "Free course on sculptural interventions in public spaces.",
-        "image": "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=600&h=400&fit=crop"
-      },
-      {
-        "title": "Public Collection",
-        "tag": "Project",
-        "date": "2023 - Completed",
-        "location": "Municipal parks, Curitiba",
-        "description": "Installation of 8 permanent works in city public parks.",
-        "image": "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=600&h=400&fit=crop"
-      },
-      {
-        "title": "Material Dialogues",
-        "tag": "Exhibition",
-        "date": "Aug - Oct 2023",
-        "location": "Galeria Millan, Rio de Janeiro",
-        "description": "Series of interactive installations inviting the public to touch the works.",
-        "image": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=600&h=400&fit=crop"
-      },
-      {
-        "title": "Casting for Artists",
-        "tag": "Class",
-        "date": "2022 - 2023",
-        "location": "Oswald de Andrade Cultural Workshop",
-        "description": "Practical workshop on bronze and aluminum casting techniques.",
-        "image": "https://images.unsplash.com/photo-1501084817091-a4f3d1d19e07?w=600&h=400&fit=crop"
-      },
-      {
-        "title": "Artist Residency",
-        "tag": "Project",
-        "date": "2022 - Completed",
-        "location": "Carrara Quarry, Italy",
-        "description": "3-month residency in the birthplace of Carrara marble, resulting in 5 works.",
-        "image": "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=600&h=400&fit=crop"
+        "date": "April/May - 2026",
+        "location": "Complexo Cultural Teatro Deodoro (Maceió-AL)",
+        "description": "Solo exhibition featuring 20 new hyper-realistic artworks filling the gallery space. The showcase invites the public to a deep reflection on our human essence, combining high-level technique and emotion.",
+        "image": "/images/exposition/exposition_deodoro.png",
+        "link": "https://globoplay.globo.com/v/14577533/"
       }
     ]
   },

@@ -243,76 +243,29 @@
     "title": "Trajetória",
     "items": [
       {
-        "title": "Formas do Invisível",
+        "title": "Workshop Rosto realista em porcelana fria",
+        "tag": "Workshop",
+        "date": "Junho/Julho - 2025",
+        "location": "Espaço Terra Viva Expressão e Arte",
+        "description": "Workshop realizado no Espaço Terra Viva Expressão e Arte, onde foram produzidos mini rostos em porcelana fria, com o objetivo de transmitir o conhecimento sobre Escultura Hiper-realista. Ensinando técnicas de modelagem e textura.",
+        "image": "/images/workshops/workshop_hiperrealismo.jpg"
+      },
+      {
+        "title": "Workshop Infantil de Escultura em biscuit",
+        "tag": "Workshop",
+        "date": "Setembro - 2025",
+        "location": "Espaço Terra Viva Expressão e Arte",
+        "description": "Workshop realizado no Espaço Terra Viva Expressão e Arte, com o objetivo de trazer a criatividade infantil à tona, em um momento de descontração e relaxamento.",
+        "image": "/images/workshops/workshop_infantil.jpg"
+      },
+      {
+        "title": "Exposição Hiper-realismo: Um mergulho no que nos fez Humanos",
         "tag": "Exposição",
-        "date": "Mar - Jun 2024",
-        "location": "Museu de Arte Moderna, São Paulo",
-        "description": "Exposição individual com 12 obras inéditas explorando a materialidade da ausência.",
-        "image": "https://images.unsplash.com/photo-1549887534-1541e9326642?w=600&h=400&fit=crop"
-      },
-      {
-        "title": "Modelagem em Argila Avançada",
-        "tag": "Aula",
-        "date": "2024 - Atual",
-        "location": "Escola de Belas Artes, UFRJ",
-        "description": "Oficina semestral sobre técnicas de modelagem para escultura figurativa e abstrata.",
-        "image": "https://images.unsplash.com/photo-1561839561-b13bcfe95249?w=600&h=400&fit=crop"
-      },
-      {
-        "title": "Memória Viva",
-        "tag": "Projeto",
-        "date": "2024 - Em andamento",
-        "location": "Vários bairros, São Paulo",
-        "description": "Projeto de esculturas comunitárias co-criadas com moradores de diferentes regiões da cidade.",
-        "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&h=400&fit=crop"
-      },
-      {
-        "title": "Escultura Brasileira Contemporânea",
-        "tag": "Exposição",
-        "date": "Nov 2023 - Fev 2024",
-        "location": "Pinacoteca do Estado, São Paulo",
-        "description": "Coletiva com 15 artistas nacionais em diálogo com o espaço arquitetônico.",
-        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop"
-      },
-      {
-        "title": "Arte e Espaço Urbano",
-        "tag": "Aula",
-        "date": "2023 - 2024",
-        "location": "Sesc Avenida Paulista",
-        "description": "Curso livre sobre intervenções escultóricas em espaços públicos.",
-        "image": "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=600&h=400&fit=crop"
-      },
-      {
-        "title": "Coleção Pública",
-        "tag": "Projeto",
-        "date": "2023 - Concluído",
-        "location": "Parques municipais, Curitiba",
-        "description": "Instalação de 8 obras permanentes em parques públicos da cidade.",
-        "image": "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=600&h=400&fit=crop"
-      },
-      {
-        "title": "Diálogos Materiais",
-        "tag": "Exposição",
-        "date": "Ago - Out 2023",
-        "location": "Galeria Millan, Rio de Janeiro",
-        "description": "Série de instalações interativas convidando o público a tocar as obras.",
-        "image": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=600&h=400&fit=crop"
-      },
-      {
-        "title": "Fundição para Artistas",
-        "tag": "Aula",
-        "date": "2022 - 2023",
-        "location": "Oficina Cultural Oswald de Andrade",
-        "description": "Workshop prático de técnicas de fundição em bronze e alumínio.",
-        "image": "https://images.unsplash.com/photo-1501084817091-a4f3d1d19e07?w=600&h=400&fit=crop"
-      },
-      {
-        "title": "Residência Artística",
-        "tag": "Projeto",
-        "date": "2022 - Concluído",
-        "location": "Pedreira de Carrara, Itália",
-        "description": "Residência de 3 meses no berço do mármore de Carrara, resultando em 5 obras.",
-        "image": "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=600&h=400&fit=crop"
+        "date": "Abril/Maio - 2026",
+        "location": "Complexo Cultural Teatro Deodoro (Maceió-AL)",
+        "description": "Exposição individual apresentando 20 obras hiper-realistas inéditas que compõem o espaço da galeria. A mostra propõe um mergulho profundo na nossa essência, unindo técnica e reflexão humana.",
+        "image": "/images/exposition/exposition_deodoro.png",
+        "link": "https://globoplay.globo.com/v/14577533/"
       }
     ]
   },
