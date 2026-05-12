@@ -33,7 +33,6 @@
           "Resina",
           "Vendida"
         ],
-        "description": "Obra Reservada",
         "price": "R$: 1.800,00",
         "image": "/images/works/1_asilo.webp",
         "dimensions": "37cm x 16cm"
@@ -45,7 +44,6 @@
           "Resina",
           "Vendida"
         ],
-        "description": "Obra Reservada",
         "price": "R$: 2.400,00",
         "image": "/images/works/2_ritual.webp",
         "dimensions": "32cm x 36cm"
@@ -144,7 +142,6 @@
       {
         "title": "Senhora com Cachorro",
         "image": "/images/works/12_senhora.webp",
-        "description": "Obra Reservada",
         "tags": [
           "Percelana Fria",
           "Resina",
@@ -176,7 +173,6 @@
       {
         "title": "O Psicanalista",
         "image": "/images/works/15_psicanalista.webp",
-        "description": "Obra Reservada",
         "tags": [
           "Percelana Fria",
           "Resina",
@@ -208,7 +204,6 @@
       {
         "title": "Insônia",
         "image": "/images/works/18_insonia.webp",
-        "description": "Obra Reservada",
         "tags": [
           "Percelana Fria",
           "Resina",
