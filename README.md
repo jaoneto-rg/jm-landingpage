@@ -62,10 +62,13 @@ Anteriormente focada em um canvas interativo com Three.js, esta seção evoluiu 
 - **Animações Coordenadas**: A imagem principal, o overlay 3D e as informações textuais entram na tela em momentos ligeiramente diferentes (delays em cascata), criando uma experiência de leitura fluida.
 
 ### Seções 3 e 4: Galerias e Trajetória (Embla)
-- **Mock de Dados no i18n:** Todo o conteúdo (títulos, descrições, múltiplas tags, dimensões e links de imagens) foi consolidado dentro dos arquivos `pt.json` e `en.json`. Isso transforma o sistema de traduções em um banco de dados estático, limpando os componentes de UI e facilitando muito a adição de novas obras.
-- **Cards Responsivos Inteligentes:** As proporções dos cards de obras se adaptam à tela, aumentando a altura e relaxando o limite de quebra de linhas (`line-clamp`) no mobile para garantir que descrições mais longas fiquem visíveis.
-- **Micro-interações:** Espaçamentos verticais internos (`padding-y`) calibrados para garantir que os cards possam crescer (`scale`) livremente durante o `hover` do mouse sem que as extremidades sejam cortadas pelo container.
-- **Otimização de Imagens:** Preparado para formato WebP, garantindo altíssima qualidade visual nas fotos das esculturas aliado a baixo peso e alta velocidade de carregamento.
+- **Mock de Dados no i18n:** Todo o conteúdo (títulos, descrições, múltiplas tags, dimensões e links de imagens) foi consolidado dentro dos arquivos `pt.json` e `en.json`. Isso transforma o sistema de traduções em um banco de dados estático, limpando os componentes de UI e facilitando muito a adição de novas obras e eventos.
+- **Filtro Inteligente de Obras (Seção 3):** Implementação de um *switch toggle* elegante que filtra o carrossel em tempo real, ocultando obras vendidas ou reservadas e exibindo apenas as disponíveis para compra.
+- **Rolagem Infinita Contínua:** Uso estratégico do `embla-carousel-react` com multiplicação dinâmica de arrays curtos. Garante que mesmo com poucas obras filtradas ou eventos na trajetória, o carrossel crie uma ilusão perfeita de loop infinito contínuo e sem buracos.
+- **Lightbox Interativo (Seção 4):** Clique nas imagens da trajetória para abrir um modal em tela cheia via `framer-motion` (`AnimatePresence`), facilitando a leitura de certificados e fotos de alta resolução.
+- **Links Externos Dinâmicos (Seção 4):** Suporte nativo para botões de "Saiba Mais", gerados automaticamente caso o evento no `.json` possua um link de URL (ex: matérias do Globoplay).
+- **Cards Responsivos e Alinhados:** As proporções dos cards se adaptam à tela. O uso de `flex-grow` e `h-full` garante que, independentemente do tamanho do texto da descrição, todos os cards da esteira tenham exatamente a mesma altura.
+- **Micro-interações:** Espaçamentos verticais internos (`padding-y`) calibrados no container para garantir que os cards possam crescer (`scale`) livremente durante o `hover` sem que as bordas sejam cortadas por `overflow-hidden`.
 
 ### Contato
 - Ícones SVG puros (sem bibliotecas externas)
