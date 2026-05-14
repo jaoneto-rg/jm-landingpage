@@ -13,7 +13,7 @@
   "hero": {
     "name": "João Maurício",
     "profession": "Escultor / Artista Plástico",
-    "bio": "Explorando a forma e o vazio através de materiais que resistem ao tempo. Minhas obras dialogam entre o clássico e o contemporâneo, buscando a essência da expressão humana.",
+    "bio": "Explorando a forma e o vazio através de materiais que resistem ao tempo. Minhas obras dialogam entre o clássico e o contemporâneo, buscando a essência da expressão humana.\nCriador do studio Simulacro: Arte com Alma.\nUtilizando o Hiperrealismo como ferramenta para explorar o Inconsciente.",
     "cta": "Ver obras"
   },
   "featured": {
@@ -231,6 +231,24 @@
         ],
         "dimensions": "52cm x 40cm x 30cm",
         "price": "R$: 2.000,00"
+      },
+      {
+        "title": "Entropie",
+        "image": "/images/works/21_entropie.jpeg",
+        "tags": [
+          "Porcelana Fria",
+          "Resina"
+        ],
+        "dimensions": "42cm x 28cm x 20cm"
+      },
+      {
+        "title": "Conforto no Desconforto",
+        "image": "/images/works/22_conforto_desconforto.jpeg",
+        "tags": [
+          "Percelana Fria",
+          "Resina"
+        ],
+        "dimensions": "70cm x 56cm x 33cm"
       }
     ]
   },

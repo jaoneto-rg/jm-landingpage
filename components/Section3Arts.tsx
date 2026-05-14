@@ -35,6 +35,7 @@ export default function Section3Arts({ messages }: Section3ArtsProps) {
   const [isVisible, setIsVisible] = useState(false)
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null)
   const [isMobile, setIsMobile] = useState(false)
   const [showOnlyAvailable, setShowOnlyAvailable] = useState(false)
 
@@ -201,6 +202,26 @@ export default function Section3Arts({ messages }: Section3ArtsProps) {
                         className={section3Styles.image}
                         loading={index < 2 ? 'eager' : 'lazy'}
                       />
+                      {/* Botão de lupa para abrir modal */}
+                      <motion.button
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{
+                          opacity: (isMobile ? isCenter : isHovered) ? 1 : 0,
+                          scale: (isMobile ? isCenter : isHovered) ? 1 : 0.8,
+                        }}
+                        transition={{ duration: 0.2 }}
+                        style={{ pointerEvents: (isMobile ? isCenter : isHovered) ? 'auto' : 'none' }}
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          setSelectedImage({ src: artwork.image, alt: artwork.title })
+                        }}
+                        className={section3Styles.zoomButton}
+                        aria-label={`Ver ${artwork.title} em tela cheia`}
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                      </motion.button>
                     </div>
 
                     {/* Informações da obra */}
@@ -251,6 +272,47 @@ export default function Section3Arts({ messages }: Section3ArtsProps) {
           </div>
         </motion.div>
       </div>
+
+      {/* Modal de imagem fullscreen */}
+      {selectedImage && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className={section3Styles.modalOverlay}
+          onClick={() => setSelectedImage(null)}
+        >
+          {/* Botão fechar */}
+          <button
+            onClick={() => setSelectedImage(null)}
+            className={section3Styles.modalCloseButton}
+            aria-label="Fechar"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          {/* Imagem */}
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
+            className={section3Styles.modalImageContainer}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={selectedImage.src}
+              alt={selectedImage.alt}
+              fill
+              className="object-contain"
+              sizes="90vw"
+              priority
+            />
+          </motion.div>
+        </motion.div>
+      )}
     </div>
   )
 }

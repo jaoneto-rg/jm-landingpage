@@ -13,7 +13,7 @@
   "hero": {
     "name": "João Maurício",
     "profession": "Sculptor / Visual Artist",
-    "bio": "Exploring form and void through materials that resist time. My works dialogue between the classic and the contemporary, seeking the essence of human expression.",
+    "bio": "Exploring form and void through materials that resist time. My works dialogue between the classic and the contemporary, seeking the essence of human expression.\nCreator of Simulacro studio: Art with Soul.\nUsing Hyperrealism as a tool to explore the Unconscious.",
     "cta": "See works"
   },
   "featured": {
@@ -231,6 +231,24 @@
         ],
         "dimensions": "52cm x 40cm x 30cm",
         "price": "R$: 2.000,00"
+      },
+      {
+        "title": "Entropie",
+        "image": "/images/works/21_entropie.jpeg",
+        "tags": [
+          "Cold Porcelain",
+          "Resin"
+        ],
+        "dimensions": "42cm x 28cm x 20cm"
+      },
+      {
+        "title": "Comfort in Discomfort",
+        "image": "/images/works/22_conforto_desconforto.jpeg",
+        "tags": [
+          "Cold Porcelain",
+          "Resin"
+        ],
+        "dimensions": "70cm x 56cm x 33cm"
       }
     ]
   },

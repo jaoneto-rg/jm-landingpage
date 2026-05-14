@@ -46,4 +46,20 @@ export const section3Styles = {
   artworkDimensions: "text-zinc-500 text-xs font-mono mt-auto pt-1 border-t border-zinc-800",
   whatsappButton: "ml-auto flex items-center justify-center bg-[#25D366] hover:bg-[#1ebd5a] transition-colors text-white rounded-full w-8 h-8 flex-shrink-0",
 
+  // Zoom Button (on image)
+  zoomButton:
+    "absolute bottom-3 right-3 z-10 flex items-center justify-center " +
+    "w-9 h-9 rounded-full bg-black/60 backdrop-blur-sm text-white/90 " +
+    "hover:bg-white/20 hover:text-white transition-colors duration-200 cursor-pointer",
+
+  // Fullscreen Modal
+  modalOverlay:
+    "fixed inset-0 z-[9999] flex items-center justify-center " +
+    "bg-black/85 backdrop-blur-md cursor-pointer",
+  modalCloseButton:
+    "absolute top-6 right-6 z-[10000] text-white/70 hover:text-white " +
+    "transition-colors duration-200 cursor-pointer",
+  modalImageContainer:
+    "relative w-[90vw] h-[85vh] cursor-default",
+
 };

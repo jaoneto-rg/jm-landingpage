@@ -120,6 +120,7 @@ export default function Section1Hero({ messages }: Section1HeroProps) {
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               className={heroStyles.bio}
+              style={{ whiteSpace: 'pre-line' }}
             >
               {bio}
             </motion.p>
@@ -154,7 +155,7 @@ export default function Section1Hero({ messages }: Section1HeroProps) {
                 style={heroStyles.photoPlaceholderInline}
               >
   <Image
-                  src="/images/artist/joaomauricio.webp"
+                  src="/images/artist/perfil.jpeg"
                   alt="Foto de João Maurício"
                   fill
                   className={heroStyles.image}
