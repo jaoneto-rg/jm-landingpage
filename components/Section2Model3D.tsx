@@ -3,15 +3,36 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import { section2Styles } from '../styles/Section2Model3DStyles'
+
+// Carregamento dinâmico do visualizador 3D para evitar erros de SSR
+const ModelViewer3D = dynamic(() => import('./ModelViewer3D'), { 
+  ssr: false,
+  loading: () => <div className="w-full h-full bg-black/20 animate-pulse" />
+})
 
 interface Section2Model3DProps {
   messages: {
     featured: {
       title: string
       subtitle: string
-      description: string
       instruction: string
+      labels: {
+        year: string
+        dimensions: string
+        edition: string
+      }
+      artwork: {
+        title: string
+        material: string
+        description: string
+        year: string
+        dimensions: string
+        edition: string
+        image: string
+        model3d?: string
+      }
     }
   }
 }
@@ -30,6 +51,7 @@ function Icon3D() {
 export default function Section2Model3D({ messages }: Section2Model3DProps) {
   const sectionRef = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
+  const [showModel, setShowModel] = useState(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -51,7 +73,7 @@ export default function Section2Model3D({ messages }: Section2Model3DProps) {
     return () => observer.disconnect()
   }, [])
 
-  const { title, subtitle, description, instruction } = messages.featured
+  const { title, subtitle, instruction, artwork, labels } = messages.featured
 
   return (
     <div
@@ -77,7 +99,7 @@ export default function Section2Model3D({ messages }: Section2Model3DProps) {
       {/* Container principal com preview 3D */}
       <div className={section2Styles.mainContainer}>
 
-        {/* Imagem da escultura com overlay de "Em breve 3D" */}
+        {/* Imagem da escultura ou Visualizador 3D */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.95 }}
@@ -85,35 +107,46 @@ export default function Section2Model3D({ messages }: Section2Model3DProps) {
           className={section2Styles.imageWrapper}
         >
           <div className={section2Styles.imageContainer}>
-            <Image
-              src="https://images.unsplash.com/photo-1561839561-b13bcfe95249?w=1200&h=900&fit=crop"
-              alt="Obra em destaque"
-              fill
-              className={section2Styles.image}
-              style={section2Styles.imageInline}
-              priority
-            />
+            {artwork.model3d && showModel ? (
+              <ModelViewer3D modelUrl={artwork.model3d} />
+            ) : (
+              <>
+                <Image
+                  src={artwork.image}
+                  alt={artwork.title}
+                  fill
+                  className={section2Styles.image}
+                  style={section2Styles.imageInline}
+                  priority
+                />
 
-            {/* Overlay com indicador 3D */}
-            <div className={section2Styles.overlay}>
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: isVisible ? 1 : 0 }}
-                transition={{ delay: 0.5, type: 'spring' }}
-                className={section2Styles.iconContainer}
-              >
-                <Icon3D />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 10 }}
-                transition={{ delay: 0.7 }}
-                className={section2Styles.overlayTextContainer}
-              >
-                <p className={section2Styles.overlaySubtitle}>{subtitle}</p>
-                <p className={section2Styles.overlayDescription}>{description}</p>
-              </motion.div>
-            </div>
+                {/* Overlay com indicador 3D */}
+                <div 
+                  className={`${section2Styles.overlay} cursor-pointer hover:bg-black/40 transition-colors`}
+                  onClick={() => artwork.model3d && setShowModel(true)}
+                >
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: isVisible ? 1 : 0 }}
+                    transition={{ delay: 0.5, type: 'spring' }}
+                    className={section2Styles.iconContainer}
+                  >
+                    <Icon3D />
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 10 }}
+                    transition={{ delay: 0.7 }}
+                    className={section2Styles.overlayTextContainer}
+                  >
+                    <p className={section2Styles.overlaySubtitle}>{subtitle}</p>
+                    <p className={section2Styles.overlayDescription}>
+                      {artwork.model3d ? 'Clique para interagir em 3D' : artwork.description}
+                    </p>
+                  </motion.div>
+                </div>
+              </>
+            )}
           </div>
         </motion.div>
 
@@ -126,30 +159,29 @@ export default function Section2Model3D({ messages }: Section2Model3DProps) {
         >
           <div>
             <h3 className={section2Styles.artworkTitle}>
-              Silêncio Eterno
+              {artwork.title}
             </h3>
             <span className={section2Styles.badge}>
-              Bronze
+              {artwork.material}
             </span>
           </div>
 
           <p className={section2Styles.artworkDescription}>
-            Série sobre contemplação e ausência. Fundição em cera perdida.
-            Esta obra representa a busca pelo silêncio interior através da forma material.
+            {artwork.description}
           </p>
 
           <div className={section2Styles.specsContainer}>
             <div className={section2Styles.specRow}>
-              <span className={section2Styles.specLabel}>Ano</span>
-              <span className={section2Styles.specValue}>2024</span>
+              <span className={section2Styles.specLabel}>{labels.year}</span>
+              <span className={section2Styles.specValue}>{artwork.year}</span>
             </div>
             <div className={section2Styles.specRow}>
-              <span className={section2Styles.specLabel}>Dimensões</span>
-              <span className={section2Styles.specValue}>45 × 30 × 30 cm</span>
+              <span className={section2Styles.specLabel}>{labels.dimensions}</span>
+              <span className={section2Styles.specValue}>{artwork.dimensions} cm</span>
             </div>
             <div className={section2Styles.specRow}>
-              <span className={section2Styles.specLabel}>Edição</span>
-              <span className={section2Styles.specValue}>3/5</span>
+              <span className={section2Styles.specLabel}>{labels.edition}</span>
+              <span className={section2Styles.specValue}>{artwork.edition}</span>
             </div>
           </div>
         </motion.div>

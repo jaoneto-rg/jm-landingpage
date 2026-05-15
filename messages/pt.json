@@ -19,8 +19,22 @@
   "featured": {
     "title": "Obra em Destaque",
     "subtitle": "Visualização 3D Interativa",
-    "description": "Em breve, explore esta obra em detalhes com visualização tridimensional. Arraste, gire e aproxime para ver cada textura.",
-    "instruction": "Em breve: visualização 3D interativa"
+    "instruction": "Em breve: visualização 3D interativa",
+    "labels": {
+      "year": "Ano",
+      "dimensions": "Dimensões",
+      "edition": "Edição"
+    },
+    "artwork": {
+      "title": "Entropie",
+      "material": "Porcelana Fria",
+      "description": "Esta obra representa a chegada ao mundo, o primeiro choro e o primeiro suspiro da vida.",
+      "year": "2026",
+      "dimensions": "42x28x20",
+      "edition": "Peça única",
+      "image": "/images/works/21_entropie.jpeg",
+      "model3d": ""
+    }
   },
   "works": {
     "title": "Obras",

@@ -19,8 +19,22 @@
   "featured": {
     "title": "Featured Work",
     "subtitle": "Interactive 3D Visualization",
-    "description": "Coming soon: explore this work in detail with three-dimensional visualization. Drag, rotate and zoom to see every texture.",
-    "instruction": "Coming soon: interactive 3D visualization"
+    "instruction": "Coming soon: interactive 3D visualization",
+    "labels": {
+      "year": "Year",
+      "dimensions": "Dimensions",
+      "edition": "Edition"
+    },
+    "artwork": {
+      "title": "Entropie",
+      "material": "Cold Porcelain",
+      "description": "Cold porcelain work, made with hyper-realistic technique. This piece represents the arrival into the world, the first cry, and the first breath of life.",
+      "year": "2026",
+      "dimensions": "42x28x20",
+      "edition": "Unique piece",
+      "image": "/images/works/21_entropie.jpeg",
+      "model3d": ""
+    }
   },
   "works": {
     "title": "Works",
