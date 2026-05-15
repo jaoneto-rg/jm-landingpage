@@ -28,9 +28,9 @@ export default function Section1Hero({ messages }: Section1HeroProps) {
           setIsVisible(true)
         }
       },
-      { 
+      {
         root: document.getElementById('main-container'),
-        threshold: 0.2 
+        threshold: 0.2
       }
     )
 
@@ -104,15 +104,26 @@ export default function Section1Hero({ messages }: Section1HeroProps) {
               {name}
             </motion.h1>
 
-            {/* Profissão */}
-            <motion.p
+            {/* Profissão e Logo */}
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className={heroStyles.profession}
+              className={heroStyles.professionWrapper}
             >
-              {profession}
-            </motion.p>
+              <p className={heroStyles.profession}>
+                {profession}
+              </p>
+              <div className={heroStyles.heroLogoContainer}>
+                <Image
+                  src="/images/artist/logo.png"
+                  alt="Logo"
+                  width={92}
+                  height={92}
+                  className="object-contain p-2"
+                />
+              </div>
+            </motion.div>
 
             {/* Bio */}
             <motion.p
@@ -154,7 +165,7 @@ export default function Section1Hero({ messages }: Section1HeroProps) {
                 className={heroStyles.photoPlaceholder}
                 style={heroStyles.photoPlaceholderInline}
               >
-  <Image
+                <Image
                   src="/images/artist/perfil.jpeg"
                   alt="Foto de João Maurício"
                   fill

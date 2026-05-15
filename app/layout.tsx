@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'João Mauricio | Escultor & Artista Plástico',
   description: 'Portfólio de João Mauricio, escultor e artista plástico. Obras em bronze, mármore e materiais contemporâneos.',
+  icons: {
+    icon: '/images/artist/logo.png',
+  },
 }
 
 export default function RootLayout({

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 import { sidebarStyles, getNavButtonClass, getNavIndicatorClass, getLangButtonClass } from '../styles/SidebarStyles'
 
 interface SidebarProps {
@@ -186,6 +187,20 @@ export default function Sidebar({ locale, onLocaleChange, messages }: SidebarPro
       >
         {/* Logo / Nome */}
         <div className={sidebarStyles.headerContainer}>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.8 }}
+            transition={{ delay: 0.05, duration: 0.4 }}
+            className={sidebarStyles.logoContainer}
+          >
+            <Image
+              src="/images/artist/logo.png"
+              alt="Logo João Maurício"
+              width={56}
+              height={56}
+              className={sidebarStyles.logoImage}
+            />
+          </motion.div>
           <motion.h1
             initial={{ opacity: 0, x: -60 }}
             animate={{

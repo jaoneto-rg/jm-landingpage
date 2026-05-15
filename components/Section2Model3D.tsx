@@ -22,6 +22,7 @@ interface Section2Model3DProps {
         year: string
         dimensions: string
         edition: string
+        price: string
       }
       artwork: {
         title: string
@@ -30,6 +31,7 @@ interface Section2Model3DProps {
         year: string
         dimensions: string
         edition: string
+        price: string
         image: string
         model3d?: string
       }
@@ -182,6 +184,10 @@ export default function Section2Model3D({ messages }: Section2Model3DProps) {
             <div className={section2Styles.specRow}>
               <span className={section2Styles.specLabel}>{labels.edition}</span>
               <span className={section2Styles.specValue}>{artwork.edition}</span>
+            </div>
+            <div className={section2Styles.specRow}>
+              <span className={section2Styles.specLabel}>{labels.price}</span>
+              <span className={section2Styles.specValue}>{artwork.price}</span>
             </div>
           </div>
         </motion.div>

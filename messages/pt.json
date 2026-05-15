@@ -23,7 +23,8 @@
     "labels": {
       "year": "Ano",
       "dimensions": "Dimensões",
-      "edition": "Edição"
+      "edition": "Edição",
+      "price": "Valor"
     },
     "artwork": {
       "title": "Entropie",
@@ -32,6 +33,7 @@
       "year": "2026",
       "dimensions": "42x28x20",
       "edition": "Peça única",
+      "price": "R$: 7.500,00",
       "image": "/images/works/21_entropie.jpeg",
       "model3d": ""
     }
@@ -253,7 +255,8 @@
           "Porcelana Fria",
           "Resina"
         ],
-        "dimensions": "42cm x 28cm x 20cm"
+        "dimensions": "42cm x 28cm x 20cm",
+        "price": "R$: 7.500,00"
       },
       {
         "title": "Conforto no Desconforto",
@@ -262,7 +265,18 @@
           "Percelana Fria",
           "Resina"
         ],
-        "dimensions": "70cm x 56cm x 33cm"
+        "dimensions": "70cm x 56cm x 33cm",
+        "price": "R$: 4.800,00"
+      },
+      {
+        "title": "Pulsão de Morte",
+        "image": "/images/works/23_pulsao_morte.jpeg",
+        "tags": [
+          "Porcelana Fria",
+          "Resina"
+        ],
+        "dimensions": "57cm x 24cm x 24cm",
+        "price": "R$: 6.000,00"
       }
     ]
   },

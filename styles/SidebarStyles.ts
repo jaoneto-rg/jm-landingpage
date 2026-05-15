@@ -20,7 +20,9 @@ export const sidebarStyles = {
   },
 
   // Header / Logo
-  headerContainer: "p-8 pb-4",
+  headerContainer: "p-8 pb-4 space-y-4",
+  logoContainer: "w-18 h-18 bg-[#f5f5f5] rounded-xl flex items-center justify-center overflow-hidden",
+  logoImage: "w-14 h-14 object-contain",
   logoText: "text-lg font-light text-white tracking-wider",
   subtitleText: "text-xs text-zinc-500 mt-1",
 

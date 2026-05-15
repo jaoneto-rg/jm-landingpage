@@ -23,7 +23,8 @@
     "labels": {
       "year": "Year",
       "dimensions": "Dimensions",
-      "edition": "Edition"
+      "edition": "Edition",
+      "price": "Price"
     },
     "artwork": {
       "title": "Entropie",
@@ -32,6 +33,7 @@
       "year": "2026",
       "dimensions": "42x28x20",
       "edition": "Unique piece",
+      "price": "R$: 7.500,00",
       "image": "/images/works/21_entropie.jpeg",
       "model3d": ""
     }
@@ -253,7 +255,8 @@
           "Cold Porcelain",
           "Resin"
         ],
-        "dimensions": "42cm x 28cm x 20cm"
+        "dimensions": "42cm x 28cm x 20cm",
+        "price": "R$: 7.500,00"
       },
       {
         "title": "Comfort in Discomfort",
@@ -262,7 +265,18 @@
           "Cold Porcelain",
           "Resin"
         ],
-        "dimensions": "70cm x 56cm x 33cm"
+        "dimensions": "70cm x 56cm x 33cm",
+        "price": "R$: 4.800,00"
+      },
+      {
+        "title": "Death Drive",
+        "image": "/images/works/23_pulsao_morte.jpeg",
+        "tags": [
+          "Cold Porcelain",
+          "Resin"
+        ],
+        "dimensions": "57cm x 24cm x 24cm",
+        "price": "R$: 6.000,00"
       }
     ]
   },
