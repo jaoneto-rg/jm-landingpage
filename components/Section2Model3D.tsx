@@ -1,13 +1,13 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import { section2Styles } from '../styles/Section2Model3DStyles'
 
 // Carregamento dinâmico do visualizador 3D para evitar erros de SSR
-const ModelViewer3D = dynamic(() => import('./ModelViewer3D'), { 
+const ModelViewer3D = dynamic(() => import('./ModelViewer3D'), {
   ssr: false,
   loading: () => <div className="w-full h-full bg-black/20 animate-pulse" />
 })
@@ -43,9 +43,9 @@ interface Section2Model3DProps {
 function Icon3D() {
   return (
     <svg width="48" height="48" viewBox="0 0 24 24" fill="none" className={section2Styles.iconSvg}>
-      <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   )
 }
@@ -62,9 +62,9 @@ export default function Section2Model3D({ messages }: Section2Model3DProps) {
           setIsVisible(true)
         }
       },
-      { 
+      {
         root: document.getElementById('main-container'),
-        threshold: 0.2 
+        threshold: 0.2
       }
     )
 
@@ -123,7 +123,7 @@ export default function Section2Model3D({ messages }: Section2Model3DProps) {
                 />
 
                 {/* Overlay com indicador 3D */}
-                <div 
+                <div
                   className={`${section2Styles.overlay} cursor-pointer hover:bg-black/40 transition-colors`}
                   onClick={() => artwork.model3d && setShowModel(true)}
                 >

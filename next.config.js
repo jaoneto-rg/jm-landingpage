@@ -10,12 +10,9 @@ const nextConfig = {
     ],
     unoptimized: true
   },
-  // Turbopack config para evitar warning de múltiplos lockfiles
-  turbopack: {
-    root: __dirname
-  },
+  transpilePackages: ['three', '@react-three/fiber', '@react-three/drei', 'framer-motion'],
   // Permitir origens de desenvolvimento
-  allowedDevOrigins: ['172.31.240.1', 'localhost', '127.0.0.1']
+  allowedDevOrigins: ['172.31.240.1', 'localhost', '127.0.0.1'],
 }
 
 module.exports = nextConfig

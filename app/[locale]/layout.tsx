@@ -1,6 +1,6 @@
 'use client'
 
-import { ReactNode, useEffect, useState, use } from 'react'
+import { ReactNode, useEffect, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
 import Sidebar from '@/components/Sidebar'
@@ -27,8 +27,8 @@ export function useI18n() {
 }
 
 export default function LocaleLayout({ children, params }: LocaleLayoutProps) {
-  // Next.js 16+: params é uma Promise, precisa usar React.use()
-  const { locale } = use(params)
+  // No Next.js 14, params é um objeto direto
+  const { locale } = params
   const pathname = usePathname()
   const router = useRouter()
   const messages = locale === 'en' ? enMessages : ptMessages

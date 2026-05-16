@@ -19,7 +19,7 @@
   "featured": {
     "title": "Featured Work",
     "subtitle": "Interactive 3D Visualization",
-    "instruction": "Coming soon: interactive 3D visualization",
+    "instruction": "Click on the image to interact with the 3D model",
     "labels": {
       "year": "Year",
       "dimensions": "Dimensions",
@@ -35,7 +35,7 @@
       "edition": "Unique piece",
       "price": "R$: 7.500,00",
       "image": "/images/works/21_entropie.jpeg",
-      "model3d": ""
+      "model3d": "/models/3d_entropie.glb"
     }
   },
   "works": {
