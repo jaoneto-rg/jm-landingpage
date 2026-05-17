@@ -7,24 +7,14 @@ import Sidebar from '@/components/Sidebar'
 
 interface LocaleLayoutProps {
   children: ReactNode
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }
 
 // Provider simples de i18n via context
-import { createContext, useContext } from 'react'
+import { I18nContext } from '@/context/I18nContext'
 import ptMessages from '@/messages/pt.json'
 import enMessages from '@/messages/en.json'
 
-type Messages = typeof ptMessages
-
-const I18nContext = createContext<{ locale: string; messages: Messages }>({
-  locale: 'pt',
-  messages: ptMessages,
-})
-
-export function useI18n() {
-  return useContext(I18nContext)
-}
 
 export default function LocaleLayout({ children, params }: LocaleLayoutProps) {
   // No Next.js 14, params é um objeto direto
