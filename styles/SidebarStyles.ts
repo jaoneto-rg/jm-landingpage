@@ -1,11 +1,11 @@
 export const sidebarStyles = {
   // Permanent visual indicator
-  indicatorContainer: "fixed left-4 top-1/2 -translate-y-1/2 z-30 flex flex-col items-center gap-2",
-  verticalLine: "w-[2px] h-16 bg-gradient-to-b from-transparent via-zinc-700 to-transparent",
+  indicatorContainer: "fixed left-1 md:left-4 top-1/2 -translate-y-1/2 z-30 flex flex-col items-center gap-1 md:gap-2",
+  verticalLine: "w-[1.5px] md:w-[2px] h-8 md:h-16 bg-gradient-to-b from-transparent via-zinc-700 to-transparent",
   menuHintContainer: "flex flex-col items-center gap-1",
-  menuHintText: "text-zinc-600 text-[10px] uppercase tracking-widest rotate-180",
+  menuHintText: "text-zinc-600 text-[8px] md:text-[10px] uppercase tracking-widest rotate-180",
   menuHintTextInline: { writingMode: 'vertical-rl' as any },
-  menuIcon: "text-zinc-600",
+  menuIcon: "text-zinc-600 w-3 h-3 md:w-4 md:h-4",
 
   // Invisible trigger zone
   triggerZone: "fixed left-0 top-0 h-full w-[40px] z-40 cursor-pointer",
