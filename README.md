@@ -1,21 +1,31 @@
 # João Maurício - Portfolio de Artista
 
-Landing page minimalista e sofisticada para escultor/artista plástico, desenvolvida com Next.js 14+, TypeScript, Tailwind CSS, Framer Motion e Three.js.
+🔗 **Acesse o projeto online:** [joaomauricioescultor.com.br/pt#model](https://joaomauricioescultor.com.br/pt#model)
 
-## Stack Tecnológica
+Landing page minimalista e sofisticada para escultor/artista plástico, focada em performance e imersão. Desenvolvida com Next.js 14, TypeScript, Tailwind CSS, Framer Motion e renderização 3D interativa avançada com Three.js.
 
-- **Next.js 14+** com App Router
-- **React 18+**
-- **TypeScript**
-- **Tailwind CSS** (cores neutras: black, white, zinc, gray)
-- **Framer Motion** (animações e transições)
-- **Three.js + React Three Fiber** (modelo 3D interativo)
-- **Embla Carousel** (carrosséis das seções 3 e 4)
-- **Sistema customizado de i18n** (PT e EN)
+## O que foi feito
+
+- **Estrutura base:** Configuração do projeto com Next.js (App Router) e internacionalização estática dinâmica (PT/EN).
+- **Design de Interface:** Layout responsivo focado em estética "Dark Mode" (fundo preto, tipografia elegante e elementos em escala de cinza).
+- **Experiência de Usuário:** Navegação por Sidebar interativa, carrosséis de imagens em loop infinito e visualização em modais (Lightbox).
+- **Gestão de Conteúdo:** Adição e atualização de obras na galeria principal, com integração de filtros por disponibilidade de venda e registros históricos na aba "Trajetória".
+- **Destaque Imersivo (3D):** Implementação de um ambiente de renderização 3D real e interativo para exploração em tempo real das esculturas do artista.
+- **Deploy e Otimização:** Resolução de conflitos de dependências, estabilização de build e implantação no Vercel com configuração de domínio próprio.
+
+## Especificações Técnicas (Stack)
+
+- **Framework:** Next.js 14.2 (App Router, Otimização de Imagens, SSR/SSG)
+- **Linguagem:** React 18+ com TypeScript (tipagem rigorosa de componentes e dados)
+- **Estilização:** Tailwind CSS (utilitários e paletas de cores customizadas)
+- **Animações:** Framer Motion (transições de página, scroll tracking e micro-interações)
+- **Renderização 3D:** `three` (Three.js base) + `@react-three/fiber` (Renderizador React) + `@react-three/drei` (Utilitários 3D avançados)
+- **Componentes UI:** Embla Carousel (carrosséis baseados em física de movimento suave)
+- **Traduções:** Sistema customizado de i18n extraindo dados de `pt.json` e `en.json`
 
 ## Estrutura do Projeto
 
-```
+```text
 /app
   /[locale]
     layout.tsx      # Layout com i18n context
@@ -26,8 +36,8 @@ Landing page minimalista e sofisticada para escultor/artista plástico, desenvol
 /components
   Sidebar.tsx       # Navegação lateral
   Section1Hero.tsx  # Hero com foto e bio
-  Section2Model3D.tsx  # Modelo 3D Three.js
-  Section3Arts.tsx  # Carrossel de obras
+  Section2Model3D.tsx  # Renderizador interativo 3D
+  Section3Arts.tsx  # Carrossel de obras e filtro
   Section4Timeline.tsx # Carrossel de trajetória
   Section5Contact.tsx  # Seção de contato
   Footer.tsx        # Rodapé
@@ -36,7 +46,7 @@ Landing page minimalista e sofisticada para escultor/artista plástico, desenvol
   en.json           # Traduções EN
 /public
   /models
-    sculpture.glb   # Modelo 3D (opcional)
+    3d_entropie.glb # Modelo 3D exportado
 ```
 
 ## Funcionalidades
@@ -54,12 +64,12 @@ A primeira seção atua como o cartão de visitas digital do artista. Suas princ
 - **Estética Minimalista**: Fundo totalmente escuro (`bg-black`), tipografia elegante, textos de apoio em tons de cinza (`zinc-400`) e foto do artista com filtro de redução de saturação (`grayscale(20%)`).
 - **Animações de Entrada**: Textos e botões surgem suavemente de baixo para cima utilizando o `framer-motion` acionado pelo scroll.
 
-### Seção 2: Obra em Destaque (Preview 3D)
-Anteriormente focada em um canvas interativo com Three.js, esta seção evoluiu para uma apresentação mais curada e sofisticada de uma obra específica (ex: "Silêncio Eterno").
-- **Visualização da Obra**: Exibe uma imagem em alta resolução da escultura com um overlay escurecido (`bg-black/60`).
-- **Indicador 3D**: Sobre a imagem, um ícone 3D customizado em SVG com animação "spring" indica a possibilidade (ou intenção futura) de interagir com a obra em três dimensões.
-- **Ficha Técnica**: Ao lado da imagem, as informações técnicas da obra são dispostas de maneira tabular e limpa (Ano, Dimensões, Edição, Material), no melhor estilo de galerias de arte.
-- **Animações Coordenadas**: A imagem principal, o overlay 3D e as informações textuais entram na tela em momentos ligeiramente diferentes (delays em cascata), criando uma experiência de leitura fluida.
+### Seção 2: Renderização 3D Interativa (Destaque)
+A grande inovação técnica deste portfólio é a capacidade de interagir com as obras físicas do artista através de um modelo 3D fotorrealista renderizado em tempo real diretamente no navegador, eliminando a dependência de plugins externos. 
+- **Tecnologias Envolvidas:** Utilizamos o ecossistema `Three.js` orquestrado pelo `@react-three/fiber`, que atua como um Reconciler React para o Three.js, permitindo montar a cena 3D usando componentes declarativos. A biblioteca `@react-three/drei` entra com abstrações complexas pré-prontas (câmeras, controles e ambiente).
+- **Carregamento e Otimização:** O modelo físico da obra (ex: "Entropie") foi convertido e é carregado utilizando o formato altamente otimizado `.glb` (glTF binário). O hook `useGLTF` realiza o parse assíncrono e eficiente da geometria (mesh) e do pipeline de materiais físicos (PBR).
+- **Iluminação e Realismo (PBR):** Para simular a ambiência volumétrica de uma galeria real de arte, a cena 3D conta com um componente `Environment` de iluminação global e reflexão. Complementarmente, o `ContactShadows` processa sombras de oclusão suaves no "chão" virtual, ancorando o modelo na cena de acordo com seu volume e incidência de luz.
+- **Interatividade Total:** A experiência coloca o usuário no controle da exploração. Através da injeção de `OrbitControls`, é possível realizar pan, aplicar zoom de inspeção e rotacionar a câmera livremente, podendo analisar todos os ângulos, concavidades e o tratamento de superfície da escultura em 360 graus.
 
 ### Seções 3 e 4: Galerias e Trajetória (Embla)
 - **Mock de Dados no i18n:** Todo o conteúdo (títulos, descrições, múltiplas tags, dimensões e links de imagens) foi consolidado dentro dos arquivos `pt.json` e `en.json`. Isso transforma o sistema de traduções em um banco de dados estático, limpando os componentes de UI e facilitando muito a adição de novas obras e eventos.
