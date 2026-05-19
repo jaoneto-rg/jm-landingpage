@@ -65,16 +65,6 @@
         "dimensions": "32cm x 36cm"
       },
       {
-        "title": "Brincadeira Sem Fim",
-        "image": "/images/works/3_brincadeirasemfim.webp",
-        "tags": [
-          "Cold Porcelain",
-          "Resin"
-        ],
-        "dimensions": "38cm x 56cm x 40cm",
-        "price": "R$: 2.200,00"
-      },
-      {
         "title": "Sociedade cansada",
         "image": "/images/works/4_sociedadecansada.webp",
         "tags": [
@@ -137,13 +127,12 @@
       {
         "title": "Olhar Azul",
         "image": "/images/works/10_olhar.webp",
-        "description": "Artwork in giveaway",
         "tags": [
           "Cold Porcelain",
           "Resin"
         ],
         "dimensions": "38cm x 22cm",
-        "price": "Contact for details"
+        "price": "R$: 1.800,00"
       },
       {
         "title": "O Declinio da Arte",
@@ -325,7 +314,7 @@
     "instagram": "@joaomauricioartista"
   },
   "footer": {
-    "rights": "© 2025 João A. M. Neto. All rights reserved.",
+    "rights": "© 2026 João A. M. Neto. All rights reserved.",
     "credits": "Developed by João A. M. Neto",
     "portfolio": "View code"
   },

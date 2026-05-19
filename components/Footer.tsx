@@ -82,7 +82,7 @@ export default function Footer({ messages }: FooterProps) {
           viewport={{ once: true }}
           className={footerStyles.yearText}
         >
-          2025
+          2026
         </motion.div>
       </div>
     </footer>
