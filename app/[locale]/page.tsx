@@ -8,7 +8,7 @@ import Section3Arts from '@/components/Section3Arts'
 import Section4Timeline from '@/components/Section4Timeline'
 import Section5Contact from '@/components/Section5Contact'
 import Footer from '@/components/Footer'
-import { useI18n } from './layout'
+import { useI18n } from '@/context/i18n'
 
 export default function HomePage() {
   const { messages } = useI18n()

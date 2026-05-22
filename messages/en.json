@@ -34,7 +34,7 @@
       "dimensions": "42x28x20",
       "edition": "Unique piece",
       "price": "R$: 7.500,00",
-      "image": "/images/works/21_entropie.jpeg",
+      "image": "/images/works/21_entropie.webp",
       "model3d": "/models/3d_entropie.glb"
     }
   },
@@ -239,7 +239,7 @@
       },
       {
         "title": "Entropie",
-        "image": "/images/works/21_entropie.jpeg",
+        "image": "/images/works/21_entropie.webp",
         "tags": [
           "Cold Porcelain",
           "Resin"
@@ -249,7 +249,7 @@
       },
       {
         "title": "Comfort in Discomfort",
-        "image": "/images/works/22_conforto_desconforto.jpeg",
+        "image": "/images/works/22_conforto_desconforto.webp",
         "tags": [
           "Cold Porcelain",
           "Resin"
@@ -259,7 +259,7 @@
       },
       {
         "title": "Death Drive",
-        "image": "/images/works/23_pulsao_morte.jpeg",
+        "image": "/images/works/23_pulsao_morte.webp",
         "tags": [
           "Cold Porcelain",
           "Resin"

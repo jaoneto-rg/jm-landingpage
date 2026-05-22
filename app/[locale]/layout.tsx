@@ -1,39 +1,22 @@
 'use client'
 
-import { ReactNode, useEffect, useState } from 'react'
+import { ReactNode } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
 import Sidebar from '@/components/Sidebar'
+import { I18nContext, ptMessages, enMessages } from '@/context/i18n'
 
 interface LocaleLayoutProps {
   children: ReactNode
-  params: Promise<{ locale: string }>
-}
-
-// Provider simples de i18n via context
-import { createContext, useContext } from 'react'
-import ptMessages from '@/messages/pt.json'
-import enMessages from '@/messages/en.json'
-
-type Messages = typeof ptMessages
-
-const I18nContext = createContext<{ locale: string; messages: Messages }>({
-  locale: 'pt',
-  messages: ptMessages,
-})
-
-export function useI18n() {
-  return useContext(I18nContext)
+  params: { locale: string }
 }
 
 export default function LocaleLayout({ children, params }: LocaleLayoutProps) {
-  // No Next.js 14, params é um objeto direto
   const { locale } = params
   const pathname = usePathname()
   const router = useRouter()
   const messages = locale === 'en' ? enMessages : ptMessages
 
-  // Função para trocar idioma
   const handleLocaleChange = (newLocale: string) => {
     const newPath = pathname.replace(`/${locale}`, `/${newLocale}`)
     router.push(newPath)
