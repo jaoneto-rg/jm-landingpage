@@ -47,6 +47,9 @@ export default function Section3Arts({ messages }: Section3ArtsProps) {
     dragFree: false,
   })
 
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi])
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi])
+
   // Detecta mobile/desktop
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 1024)
@@ -159,6 +162,32 @@ export default function Section3Arts({ messages }: Section3ArtsProps) {
       <div className={section3Styles.carouselWrapper}>
         <div className={section3Styles.overlayLeft} style={section3Styles.overlayInlineLeft} />
         <div className={section3Styles.overlayRight} style={section3Styles.overlayInlineRight} />
+
+        {/* Setas de navegação — visíveis apenas no mobile */}
+        {isMobile && (
+          <>
+            <button
+              onClick={scrollPrev}
+              className={section3Styles.arrowButton}
+              style={{ left: '8px' }}
+              aria-label="Obra anterior"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              onClick={scrollNext}
+              className={section3Styles.arrowButton}
+              style={{ right: '8px' }}
+              aria-label="Próxima obra"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </>
+        )}
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}

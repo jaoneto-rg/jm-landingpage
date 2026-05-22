@@ -11,6 +11,13 @@ export const section3Styles = {
   carouselWrapper: "relative w-full",
   overlayLeft: "absolute left-0 top-0 bottom-0 w-20 sm:w-32 lg:w-48 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none",
   overlayRight: "absolute right-0 top-0 bottom-0 w-20 sm:w-32 lg:w-48 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none",
+
+  // Mobile Navigation Arrows
+  arrowButton:
+    "absolute top-1/2 -translate-y-1/2 z-20 flex items-center justify-center " +
+    "w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 " +
+    "text-white/80 hover:bg-white/25 hover:text-white active:scale-95 " +
+    "transition-all duration-200 cursor-pointer shadow-lg",
   overlayInlineLeft: {
     WebkitMaskImage: 'linear-gradient(to right, black 60%, transparent 100%)',
     maskImage: 'linear-gradient(to right, black 60%, transparent 100%)',
